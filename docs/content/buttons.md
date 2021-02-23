@@ -23,7 +23,7 @@ Buttons are used for **actions**, like in forms, while textual hyperlinks are us
 ## Default button
 
 Classic buttons are the core of our system, they are used to signal an interactive action.
-<iframe title="Buttons" :src="'{{ window.location.href.startsWith('https://stagecast') ? '/stagecast-styles' : './docs' }}/examples/buttons.html'"></iframe>
+<iframe title="Buttons" :src="'./stagecast-styles/docs/examples/buttons.html'"></iframe>
 
 ```html {highlight: [2]}
   <button type="button" class="btn mr-3">Default</button>
@@ -36,7 +36,7 @@ Classic buttons are the core of our system, they are used to signal an interacti
 ## Ghost
 Ghost buttons are used for less relevant actions.
 
-<iframe title="Ghost buttons" src="./docs/examples/ghost-buttons.html"></iframe>
+<iframe title="Ghost buttons" src="./stagecast-styles/docs/examples/ghost-buttons.html"></iframe>
 
 ```html {highlight: [2]}
   <button type="button" class="btn btn-ghost-primary mr-3">Primary</button>
@@ -48,7 +48,7 @@ Ghost buttons are used for less relevant actions.
 ## Sizing
 We currently support small and normal buttons
 
-<iframe title="Small buttons" height="200" src="./docs/examples/buttons-sizing.html"></iframe>
+<iframe title="Small buttons" height="200" src="./stagecast-styles/docs/examples/buttons-sizing.html"></iframe>
 
 ```html {highlight: [2]}
   <button type="button" class="btn btn-sm mr-3">Default</button>
@@ -61,7 +61,7 @@ We currently support small and normal buttons
 ## Buttons With Icon
 
 
-<iframe title="Buttons with icons" height="300" src="./docs/examples/buttons-icons.html"></iframe>
+<iframe title="Buttons with icons" height="300" src="./stagecast-styles/docs/examples/buttons-icons.html"></iframe>
 
 ```html { highlight: [3] }
   <div class="mb-4">
