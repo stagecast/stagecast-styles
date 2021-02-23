@@ -23,7 +23,7 @@ Buttons are used for **actions**, like in forms, while textual hyperlinks are us
 ## Default button
 
 Classic buttons are the core of our system, they are used to signal an interactive action.
-<iframe title="Buttons" :src="'{{ window.href.startsWith('https://stagecast') ? '/stagecast-styles' : './docs' }}/examples/buttons.html'"></iframe>
+<iframe title="Buttons" :src="'{{ window.location.href.startsWith('https://stagecast') ? '/stagecast-styles' : './docs' }}/examples/buttons.html'"></iframe>
 
 ```html {highlight: [2]}
   <button type="button" class="btn mr-3">Default</button>
