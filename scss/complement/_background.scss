@@ -1,0 +1,3 @@
+@each $key, $value in $z-space-colors {
+  @include bg-variant(".bg-#{$key}", $value, true);
+}

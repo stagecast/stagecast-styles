@@ -1,0 +1,85 @@
+<html>
+
+<head></head>
+
+<body>
+  <div class="frame-root">
+    <div class="frame-content">
+      <div>
+        <link rel="stylesheet" href="../../assets/css/main.css">
+        <div class="frame-example p-3">
+          <div class="mb-4">
+            <button type="button" class="btn mr-3"><i class="pre-icon" data-feather="airplay"></i>Default</button>
+            <button type="button" class="btn btn-primary mr-3"><i class="pre-icon" data-feather="airplay"></i>Primary</button>
+            <button type="button" class="btn btn-secondary mr-3"><i class="pre-icon" data-feather="download-cloud"></i>Secondary</button>
+            <button type="button" class="btn btn-success mr-3"><i class="pre-icon" data-feather="edit-3"></i>Success</button>
+            <button type="button" class="btn btn-danger mr-3"><i class="pre-icon" data-feather="alert-circle"></i>Danger</button>
+          </div>
+          <div class="mb-4">
+            <button type="button" class="btn btn-sm mr-3"><i class="pre-icon" data-feather="airplay"></i>Default</button>
+            <button type="button" class="btn btn-sm btn-primary mr-3"><i class="pre-icon" data-feather="airplay"></i>Primary</button>
+            <button type="button" class="btn btn-sm btn-secondary mr-3"><i class="pre-icon" data-feather="download-cloud"></i>Secondary</button>
+            <button type="button" class="btn btn-sm btn-success mr-3"><i class="pre-icon" data-feather="edit-3"></i>Success</button>
+            <button type="button" class="btn btn-sm btn-danger mr-3"><i class="pre-icon" data-feather="alert-circle"></i>Danger</button>
+          </div>
+          <div class="mb-4">
+            <button type="button" class="btn btn-ghost mr-3"><i data-feather="airplay"></i></button>
+            <button type="button" class="btn btn-ghost-primary mr-3"><i data-feather="airplay"></i></button>
+            <button type="button" class="btn btn-ghost-secondary mr-3"><i data-feather="download-cloud"></i></button>
+            <button type="button" class="btn btn-ghost-success mr-3"><i data-feather="edit-3"></i></button>
+            <button type="button" class="btn btn-ghost-danger mr-3"><i data-feather="alert-circle"></i></button>
+          </div>
+          <div>
+            <button type="button" class="btn btn-sm btn-ghost mr-3"><i data-feather="airplay"></i></button>
+            <button type="button" class="btn btn-sm btn-ghost-primary mr-3"><i data-feather="airplay"></i></button>
+            <button type="button" class="btn btn-sm btn-ghost-secondary mr-3"><i data-feather="download-cloud"></i></button>
+            <button type="button" class="btn btn-sm btn-ghost-success mr-3"><i data-feather="edit-3"></i></button>
+            <button type="button" class="btn btn-sm btn-ghost-danger mr-3"><i data-feather="alert-circle"></i></button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/node_modules/jquery/dist/jquery.slim.min.js"></script>
+  <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script>
+    feather.replace();
+
+    ready(event => {
+      addSvgBackgroundToForm();
+      setIntermediateCheckboxes();
+    })
+
+    function setIntermediateCheckboxes() {
+      const checkbox = document.querySelector('.custom-control-input[indeterminate]');
+      checkbox.indeterminate = true;
+    }
+    function addSvgBackgroundToForm() {
+      const iconPrependList = document.querySelectorAll('.icon-prepend');
+      for (let index = 0; index < iconPrependList.length; index++) {
+        const element = iconPrependList[index];
+        const icon = element.dataset.icon;
+        const svg = feather.icons[icon].toSvg({'stroke-width': 1.5, color: 'rgba(255,255,255,0.7)'})
+        const escapeSvg = svg.replace(/</g, '%3c')
+          .replace(/>/g, "%3e")
+          .replace(/#/g, "%23")
+          .replace(/"/g, "\'")
+          .replace(/\)/g, "%29")
+          .replace(/\(/g, "%28");
+        element.style.backgroundImage = `url("data:image/svg+xml,${escapeSvg}")`;
+      }
+    }
+    function ready(callbackFunction){
+      if(document.readyState != 'loading')
+        callbackFunction(event)
+      else
+        document.addEventListener("DOMContentLoaded", callbackFunction)
+    }
+
+  </script>
+</body>
+
+</html>

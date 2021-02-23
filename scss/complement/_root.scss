@@ -1,0 +1,15 @@
+:root {
+  // Custom variable values only support SassScript inside `#{}`.
+  @each $color, $value in $z-space-colors {
+    --z-space-#{$color}: #{$value};
+  }
+
+  @each $color, $value in $theme-color-variants {
+    --#{$color}: #{$value};
+  }
+
+  @each $emph, $value in $text-emph {
+    --text-#{$emph}-emph: #{$value};
+  }
+
+}

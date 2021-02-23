@@ -1,0 +1,10 @@
+.h00, .h0 {
+  margin-bottom: $headings-margin-bottom;
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  line-height: $headings-line-height;
+  color: $headings-color;
+}
+
+.h00 { @include font-size($h00-font-size); }
+.h0 { @include font-size($h0-font-size); }

@@ -1,0 +1,33 @@
+.form-control {
+  &:disabled,
+  &[readonly] {
+    background-color: $input-disabled-bg;
+    // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
+    opacity: 0.3;
+  }
+}
+
+.form-control {
+  &.icon-prepend {
+    padding-left: $input-height-inner;
+    background-repeat: no-repeat;
+    background-position: left $input-height-inner-quarter center;
+    background-size: 1rem 1rem;
+  }
+  &.icon-append {
+    padding-right: $input-height-inner;
+    background-repeat: no-repeat;
+    background-position: right $input-height-inner-quarter center;
+    background-size: 1rem 1rem;
+  }
+}
+
+.form-group {
+  position: relative;
+
+  .form-text-right {
+    position: absolute;
+    right: 0px;
+    margin-top: 0.25rem;
+  }
+}

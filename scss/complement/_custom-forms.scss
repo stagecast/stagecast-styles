@@ -1,0 +1,32 @@
+.custom-control {
+  min-height: 1rem * $line-height-base;
+}
+
+.custom-switch {
+  .custom-control-input:checked ~ .custom-control-label {
+    &::after {
+      background-color: $custom-switch-indicator-active-bg;
+    }
+  }
+}
+
+.custom-checkbox, .custom-radio, .custom-switch {
+  .custom-control-input:disabled {
+    & ~ .custom-control-label::before {
+      opacity: $custom-control-label-disabled-opacity;
+    }
+
+    & ~ .custom-control-label::after {
+      opacity: $custom-control-label-disabled-opacity;
+    }
+
+    &:checked ~ .custom-control-label::before {
+      border-color: transparent;
+      opacity: $custom-control-label-disabled-opacity;
+    }
+
+    &:checked ~ .custom-control-label::after {
+      opacity: $custom-control-label-disabled-opacity;
+    }
+  }
+}

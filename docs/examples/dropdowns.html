@@ -1,0 +1,69 @@
+<html>
+
+<head></head>
+
+<body>
+  <div class="frame-root">
+    <div class="frame-content">
+      <div>
+        <link rel="stylesheet" href="../../assets/css/main.css">
+        <div class="frame-example pb-6">
+          <div class="dropdown">
+            <button class="btn btn-ghost-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i data-feather="chevron-down"></i>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <button class="dropdown-item active" href="#"><i class="pre-icon mr-3" data-feather="copy"></i>Duplicate</button>
+              <button class="dropdown-item" href="#"><i class="pre-icon mr-3" data-feather="edit-3"></i>Edit</button>
+              <button class="dropdown-item" href="#"><i class="pre-icon mr-3" data-feather="tag"></i>Action long title</button>
+              <div class="dropdown-divider"></div>
+              <button class="dropdown-item text-danger" href="#"><i class="pre-icon mr-3" data-feather="trash-2"></i>Delete item</button>
+              <button class="dropdown-item disabled" href="#"><i class="pre-icon mr-3" data-feather="edit-3"></i>Disabled</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/node_modules/jquery/dist/jquery.slim.min.js"></script>
+  <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script>
+    feather.replace();
+
+    ready(event => {
+      addSvgBackgroundToForm();
+      setIntermediateCheckboxes();
+    })
+
+    function setIntermediateCheckboxes() {
+      const checkbox = document.querySelector('.custom-control-input[indeterminate]');
+      checkbox.indeterminate = true;
+    }
+    function addSvgBackgroundToForm() {
+      const iconPrependList = document.querySelectorAll('.icon-prepend');
+      for (let index = 0; index < iconPrependList.length; index++) {
+        const element = iconPrependList[index];
+        const icon = element.dataset.icon;
+        const svg = feather.icons[icon].toSvg({'stroke-width': 1.5, color: 'rgba(255,255,255,0.7)'})
+        const escapeSvg = svg.replace(/</g, '%3c')
+          .replace(/>/g, "%3e")
+          .replace(/#/g, "%23")
+          .replace(/"/g, "\'")
+          .replace(/\)/g, "%29")
+          .replace(/\(/g, "%28");
+        element.style.backgroundImage = `url("data:image/svg+xml,${escapeSvg}")`;
+      }
+    }
+    function ready(callbackFunction){
+      if(document.readyState != 'loading')
+        callbackFunction(event)
+      else
+        document.addEventListener("DOMContentLoaded", callbackFunction)
+    }
+
+  </script>
+</body>
+
+</html>
