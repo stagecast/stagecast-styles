@@ -1,6 +1,6 @@
 # Dropdowns
 
-<iframe title="Dropdown" height="300" src="../examples/dropdowns.html"></iframe>
+<iframe title="Dropdown" height="300" src="./docs/examples/dropdowns.html"></iframe>
 
 ```html {highlight: [2]}
   <div class="dropdown">
