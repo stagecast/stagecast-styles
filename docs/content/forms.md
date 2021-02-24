@@ -9,7 +9,7 @@ Here’s a quick example to demonstrate Bootstrap’s form styles. Keep reading 
 ## Form controls
 Textual form controls—like `<input>`s, `<select>`s, and `<textarea>`s—are styled with the `.form-control` class, exaclty like Bootstrap. Included are styles for general appearance, focus state, sizing, and more.
 
-Be sure to explore our custom forms to further style <select>s.
+Be sure to explore our custom forms to further style `<select>`s.
 <iframe title="Form Controls" height="300" src="./docs/examples/forms-controls.html"></iframe>
 
 ```html {highlight: [2]}
