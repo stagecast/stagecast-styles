@@ -2,6 +2,10 @@
   min-height: 1rem * $line-height-base;
 }
 
+.custom-control-label {
+  user-select: none;
+}
+
 .custom-switch {
   .custom-control-input:checked ~ .custom-control-label {
     &::after {

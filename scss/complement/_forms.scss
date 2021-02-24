@@ -1,4 +1,8 @@
 .form-control {
+
+  &:hover {
+    background-color: $input-hover-bg;
+  }
   &:disabled,
   &[readonly] {
     background-color: $input-disabled-bg;

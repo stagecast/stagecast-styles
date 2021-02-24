@@ -5,6 +5,7 @@
 @import "bootstrap/scss/functions"; // Required
 @import "./overrides/variables"; // Stagecast overrides of bootstrap/scss/variables (Required)
 @import "./overrides/mixins"; // Stagecast overrides of bootstrap/scss/mixins (Required)
+@import "./overrides/close";
 
 // For all the other non-root variables, you can override them here. Here you can also use
 // bootstrap variables that you haven't used before because they weren't imported
@@ -32,11 +33,11 @@
 // @import "bootstrap/scss/pagination";
 // @import "bootstrap/scss/badge";
 // @import "bootstrap/scss/jumbotron";
-// @import "bootstrap/scss/alert";
+@import "bootstrap/scss/alert";
 @import "bootstrap/scss/progress";
 // @import "bootstrap/scss/media";
 // @import "bootstrap/scss/list-group";
-@import "bootstrap/scss/close";
+// @import "bootstrap/scss/close";
 // @import "bootstrap/scss/toasts";
 @import "bootstrap/scss/modal"; // Requires transitions
 // @import "bootstrap/scss/tooltip";
