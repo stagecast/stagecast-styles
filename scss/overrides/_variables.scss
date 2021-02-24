@@ -158,7 +158,7 @@ $colors: map-merge(
 );
 
 $primary:       $blue-300 !default;
-$secondary:     $z-space-16 !default;
+$secondary:     $z-space-06 !default;
 $success:       $green-300 !default;
 $info:          $white !default;
 $warning:       $yellow !default;
@@ -772,6 +772,32 @@ $custom-file-text: (
   en: "Browse"
 ) !default;
 
+// added - start
+$custom-dropzone-height:                $input-height !default;
+$custom-dropzone-height-inner:          $input-height-inner !default;
+$custom-dropzone-focus-border-color:    $input-focus-border-color !default;
+$custom-dropzone-focus-box-shadow:      $input-focus-box-shadow !default;
+$custom-dropzone-disabled-bg:           $input-disabled-bg !default;
+
+$custom-dropzone-padding-y:             map-get($spacers, 5) !default;
+$custom-dropzone-padding-x:             map-get($spacers, 5) !default;
+$custom-dropzone-line-height:           $input-line-height !default;
+$custom-dropzone-font-family:           $input-font-family !default;
+$custom-dropzone-font-weight:           $input-font-weight !default;
+$custom-dropzone-color:                 $input-color !default;
+$custom-dropzone-bg:                    $input-bg !default;
+$custom-dropzone-border-width:          $input-border-width !default;
+$custom-dropzone-border-color:          $input-border-color !default;
+$custom-dropzone-border-radius:         $input-border-radius !default;
+$custom-dropzone-box-shadow:            $input-box-shadow !default;
+$custom-dropzone-button-color:          $custom-dropzone-color !default;
+$custom-dropzone-button-bg:             $input-group-addon-bg !default;
+
+$custom-dropzone-img-color:             $text-medium-emph !default;
+$custom-dropzone-bg-img:                url("data:image/svg+xml,<svg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M31.6667 5H8.33333C6.49238 5 5 6.49238 5 8.33333V31.6667C5 33.5076 6.49238 35 8.33333 35H31.6667C33.5076 35 35 33.5076 35 31.6667V8.33333C35 6.49238 33.5076 5 31.6667 5Z' stroke='#{$custom-dropzone-img-color}' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'/><path d='M14.1666 16.6667C15.5473 16.6667 16.6666 15.5474 16.6666 14.1667C16.6666 12.786 15.5473 11.6667 14.1666 11.6667C12.7859 11.6667 11.6666 12.786 11.6666 14.1667C11.6666 15.5474 12.7859 16.6667 14.1666 16.6667Z' stroke='#{$custom-dropzone-img-color}' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'/><path d='M35 25L26.6667 16.6667L8.33337 35' stroke='#{$custom-dropzone-img-color}' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'/></svg>") !default;
+
+
+// added - end
 
 // Form validation
 
@@ -1235,7 +1261,7 @@ $spinner-border-width-sm: .2em !default;
 
 // Close
 
-$close-font-size:                   $font-size-base * 2 !default;
+$close-font-size:                   24px !default;
 $close-font-weight:                 $font-weight-light !default;
 $close-color:                       $z-space-00 !default;
 $close-text-shadow:                 none !default;

@@ -34,3 +34,81 @@
     }
   }
 }
+
+.dropzone-control {
+  border: $custom-dropzone-border-color solid $custom-dropzone-border-width;
+  border-radius: $custom-dropzone-border-radius;
+  padding: $custom-dropzone-padding-x $custom-dropzone-padding-y;
+  & > input[type="file"] {
+    display: none;
+  }
+  .dropzone-control-label {
+    background-image: $custom-dropzone-bg-img;
+    background-repeat: no-repeat;
+    background-position: 0% 50%;
+    background-size: 40px 40px;
+    padding-left: 48px;
+    margin-bottom: 0;
+  }
+
+  .dropzone-control-divider {
+    margin-top: $custom-dropzone-padding-y;
+    border: $custom-dropzone-border-color solid $custom-dropzone-border-width;
+    display: block;
+    width: 100%;
+  }
+
+  .dropzone-preview {
+    button.delete {
+      background: var(--z-space-00);
+      border-radius: 50%;
+      margin: map-get($spacers, 2);
+      border: none;
+      box-shadow: none;
+      height: 24px;
+      width: 24px;
+      padding: 0;
+      position: absolute;
+      right: 0;
+      display: none;
+
+      @include font-size($close-font-size);
+      font-weight: $close-font-weight;
+      line-height: $input-btn-line-height;
+      color: var(--text-medium-emph);
+      text-shadow: $close-text-shadow;
+
+      // Override <a>'s hover style
+      @include hover() {
+        color: var(--text-high-emph);
+        text-decoration: none;
+      }
+    }
+
+    .dropzone-preview-img {
+      background: var(--z-space-01);
+      border-radius: $custom-dropzone-border-radius;
+      /* margin: 0 5px 0 10px; */
+      width: 100%;
+      position: relative;
+      margin-top: $custom-dropzone-padding-y;
+
+      img {
+        border: 1px solid transparent;
+        border-radius: $custom-dropzone-border-radius;
+        width: 100%;
+        height: 190px;
+        object-fit: contain;
+      }
+
+      &:hover > button.delete {
+        display: block;
+      }
+
+      &:hover img, & .selected {
+        border: $custom-dropzone-border-color solid $custom-dropzone-border-width;
+      }
+    }
+  }
+}
+

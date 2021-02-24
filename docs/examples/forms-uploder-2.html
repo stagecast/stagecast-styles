@@ -1,0 +1,48 @@
+<html>
+<head>
+  <link rel="stylesheet" href="./frame.css">
+</head>
+<body>
+  <div class="frame-root">
+    <div class="frame-content">
+      <div>
+        <link rel="stylesheet" href="../../assets/css/main.css">
+        <div class="frame-example p-1">
+          <div class="form-group">
+            <label for="image-uplaod">Image uploader optional label</label>
+            <div class="dropzone-control w-50">
+              <div class="dropzone-overlay d-none">
+                <img class="m-auto" src="./assets/svg/preloaders--circular-preloader.svg" alt="">
+              </div>
+              <input type="file" id="immUploader1" name="image-upload" multiple accept="img/*">
+              <label class="dropzone-control-label" for="immUploader1">
+                <div class="text-primary">Drag and drop or click to upload an image</div>
+                <div style="color: var(--text-medium-emph)">You can add 2 images</div>
+              </label>
+
+              <!-- Divider -->
+              <div class="dropzone-control-divider"></div>
+              <!-- Preview -->
+              <div class="dropzone-preview">
+                <div class="dropzone-preview-img">
+                  <button type="button" class="delete" data-dismiss="alert" aria-label="Delete">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                  <img src="https://pbs.twimg.com/profile_images/428316729220276224/EdBZ2Kgp.jpeg" alt="uploader image">
+                </div>
+                <div class="dropzone-preview-img">
+                  <button type="button" class="delete" data-dismiss="alert" aria-label="Delete">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                  <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2F2.bp.blogspot.com%2F-837wzfFhOmQ%2FUMW2c9Ox25I%2FAAAAAAAAKYg%2Fmi13z468aMQ%2Fs1600%2Fcute-puppies-pictures-1.jpg&f=1&nofb=1" alt="uploader image">
+                </div>
+              </div>
+            </div>
+            <small class="form-text text-muted">Supported file extensions are .jpg, .png, .svg, .gif</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
