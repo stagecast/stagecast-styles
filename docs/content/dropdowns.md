@@ -1,5 +1,13 @@
 # Dropdowns
 
+The dropdown component offers support for triggering modifying actions on UI elements like the Room object or the Activation card.
+
+Common options available in the dropdown include
+- **Editing**
+- **Duplicating**
+- **Deleting**
+
+
 <iframe title="Dropdown" height="300" src="./docs/examples/dropdowns.html"></iframe>
 
 ```html {highlight: [2]}
