@@ -33,7 +33,7 @@
 // @import "bootstrap/scss/badge";
 // @import "bootstrap/scss/jumbotron";
 // @import "bootstrap/scss/alert";
-// @import "bootstrap/scss/progress";
+@import "bootstrap/scss/progress";
 // @import "bootstrap/scss/media";
 // @import "bootstrap/scss/list-group";
 @import "bootstrap/scss/close";
@@ -47,11 +47,12 @@
 // @import "bootstrap/scss/print";
 
 // Custom styles
-@import "complement/root";
 @import "complement/background";
-@import "complement/forms";
 @import "complement/custom-forms";
 @import "complement/dropdown";
+@import "complement/forms";
+@import "complement/root";
+@import "complement/progress";
 @import "complement/type";
 
 // TODO:

@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <title>Stagecast v3</title>
   </head>
-  <body>
+  <body style="padding: 32px">
     <div class="row mx-auto">
       <!-- Intro -->
       <div class="col-12 mb-4">
@@ -198,6 +198,7 @@
           <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
         </div>
       </form>
+
       <form class="col-4">
         <h1>form - sm</h1>
         <div class="form-group">
@@ -361,6 +362,59 @@
         </div>
       </div>
 
+      <!-- Progress -->
+      <div class="col-12">
+        <div class="w-25">
+          <div class="progress mt-4">
+            <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <div class="progress mt-4">
+            <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <div class="progress mt-4">
+            <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <div class="progress mt-4">
+            <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <div class="d-flex flex-row align-items-center mt-4">
+            <div class="mr-3">50</div>
+            <div class="progress w-100">
+              <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%</div>
+            </div>
+          </div>
+
+        </div>
+        <div class="w-25">
+          <div class="progress mt-4">
+            <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <div class="progress mt-4">
+            <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <div class="progress mt-4">
+            <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <div class="progress mt-4">
+            <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <div class="progress mt-4">
+            <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+        <div class="w-25">
+          <div class="progress mt-4">
+            <div class="progress-bar" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="progress-bar bg-success" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="progress-bar bg-info" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <div class="progress mt-4">
+            <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="progress-bar progress-bar-striped-inverted bg-info" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>

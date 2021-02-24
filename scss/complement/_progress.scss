@@ -1,0 +1,12 @@
+.progress-bar, .progress-bar-striped, .progress-bar-animated {
+  &:last-child {
+    border-top-right-radius: $progress-border-radius;
+    border-bottom-right-radius: $progress-border-radius;
+  }
+}
+
+.progress-bar-striped-inverted {
+  @include gradient-striped(rgba($black, .15));
+  background-size: $progress-height $progress-height;
+}
+

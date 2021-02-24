@@ -8,6 +8,10 @@
     --#{$color}: #{$value};
   }
 
+  @each $color, $value in $colors {
+    --#{$color}: #{$value};
+  }
+
   @each $emph, $value in $text-emph {
     --text-#{$emph}-emph: #{$value};
   }

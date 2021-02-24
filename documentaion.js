@@ -22,6 +22,8 @@ new Docute({
         { title: 'Color system', link: '/colors' },
         { title: 'Forms', link: '/forms' },
         { title: 'Dropdowns', link: '/dropdowns' },
+        { title: 'Icons', link: '/icons' },
+        { title: 'Progress', link: '/progress' },
         { title: 'Typography', link: '/typography' }
       ]
     }
