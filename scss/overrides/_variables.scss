@@ -116,6 +116,46 @@ $orange:  #fd7e14 !default;
 $yellow:  #ffc107 !default;
 
 $colors: () !default;
+$colors: map-merge(
+  (
+    "blue-50": $blue-50,
+    "blue-100": $blue-100,
+    "blue-200": $blue-200,
+    "blue-300": $blue-300,
+    "blue-400": $blue-400,
+    "blue-500": $blue-500,
+    "blue-600": $blue-600,
+    "blue-700": $blue-700,
+    "blue-800": $blue-800,
+    "blue-900": $blue-900,
+
+    "green-50": $green-50,
+    "green-100": $green-100,
+    "green-200": $green-200,
+    "green-300": $green-300,
+    "green-400": $green-400,
+    "green-500": $green-500,
+    "green-600": $green-600,
+    "green-700": $green-700,
+    "green-800": $green-800,
+    "green-900": $green-900,
+
+    "red-50": $red-50,
+    "red-100": $red-100,
+    "red-200": $red-200,
+    "red-300": $red-300,
+    "red-400": $red-400,
+    "red-500": $red-500,
+    "red-600": $red-600,
+    "red-700": $red-700,
+    "red-800": $red-800,
+    "red-900": $red-900,
+
+    "orange":     $orange,
+    "yellow":     $yellow
+  ),
+  $colors
+);
 
 $primary:       $blue-300 !default;
 $secondary:     $z-space-16 !default;

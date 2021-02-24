@@ -18,18 +18,21 @@ new Docute({
     {
       title: 'Guide',
       links: [
-        { title: 'Introduction', link: '/intro' },
         { title: 'Buttons', link: '/buttons' },
+        { title: 'Color system', link: '/colors' },
+        { title: 'Forms', link: '/forms' },
         { title: 'Dropdowns', link: '/dropdowns' },
         { title: 'Typography', link: '/typography' }
       ]
     }
   ],
   cssVariables: {
+    accentColor: 'var(--primary-light)',
     pageBackground: 'var(--z-space-00)',
     headerBackground:  'var(--z-space-00)',
     sidebarBackground:  'var(--z-space-00)',
     headerTextColor:  'var(--text-high-emph)',
+    linkColor:  'var(--primary-light)',
     navLinkColor:  'var(--text-high-emph)',
     sidebarLinkColor:  'var(--text-high-emph)',
     sidebarLinkActiveColor:  'var(--text-high-emph)',
@@ -45,7 +48,7 @@ new Docute({
     codeBlockBackground:  'var(--z-space-02)',
     codeBlockTextColor:  'var(--text-high-emph)',
     highlightedLineBackground: 'var(--z-space-24)',
-    highlightedLineBorderColor: 'var(--primary-dark)'
+    highlightedLineBorderColor: 'var(--primary-light)'
   },
   footer: `
   <div style="border-top:1px solid var(--border-color);padding-top:30px;margin: 40px 0;color:#999999;font-size: .9rem;">
