@@ -24,6 +24,7 @@ new Docute({
         { title: 'Forms', link: '/forms' },
         { title: 'Dropdowns', link: '/dropdowns' },
         { title: 'Icons', link: '/icons' },
+        { title: 'Modals', link: '/modals' },
         { title: 'Progress', link: '/progress' },
         { title: 'Typography', link: '/typography' }
       ]

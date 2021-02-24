@@ -37,3 +37,25 @@ button.close {
 a.close.disabled {
   pointer-events: none;
 }
+
+button.delete {
+  background: var(--z-space-00);
+  border-radius: 50%;
+  border: none;
+  box-shadow: none;
+  height: 24px;
+  width: 24px;
+  padding: 0;
+
+  @include font-size($close-font-size);
+  font-weight: $close-font-weight;
+  line-height: $input-btn-line-height;
+  color: var(--text-medium-emph);
+  text-shadow: $close-text-shadow;
+
+  // Override <a>'s hover style
+  @include hover() {
+    color: var(--text-high-emph);
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,61 @@
+<html>
+<head>
+  <link rel="stylesheet" href="./frame.css">
+</head>
+<body>
+  <div class="frame-root">
+    <div class="frame-content">
+      <div>
+        <link rel="stylesheet" href="../../assets/css/main.css">
+        <div class="frame-example p-1">
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Open the modal!</button>
+
+<div class="modal fade show" style="display: block;" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="exampleModalLabel">Edit Workspace</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="">
+          <div class="form-group">
+            <label for="modalInput1">Title</label>
+            <input type="text" class="form-control" id="modalInput1" placeholder="Type title..." aria-describedby="name">
+            <small id="emailHelp" class="form-text text-muted">50 characters</small>
+          </div>
+          <div class="form-group">
+            <label for="image-uplaod">Workspace icon <span class="text-muted">(optional)</span></label>
+            <div class="dropzone-control">
+              <div class="dropzone-overlay d-none">
+                <img class="m-auto" src="./assets/svg/preloaders--circular-preloader.svg" alt="">
+              </div>
+              <input type="file" id="immUploader1" name="image-upload" multiple accept="img/*">
+              <label class="dropzone-control-label" for="immUploader1">
+                <div class="text-primary">Drag and drop or click to upload an image</div>
+                <div style="color: var(--text-medium-emph)">You can add 2 images</div>
+              </label>
+            </div>
+            <small class="form-text text-muted">Supported file extensions are .jpg, .png, .svg, .gif</small>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary">Save Changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/feather-icons"></script>
+<script src="../examples.js"></script>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

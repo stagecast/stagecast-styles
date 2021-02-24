@@ -109,7 +109,7 @@ You can set heights using classes like `.form-control-lg` and `.form-control-sm`
 <iframe title="Uploder" height="180" src="./docs/examples/forms-uploder-1.html"></iframe>
 
 ```html
-<div class="dropzone-control w-50">
+<div class="dropzone-control">
   <div class="dropzone-overlay d-none">
     <img class="m-auto" src="./assets/svg/preloaders--circular-preloader.svg" alt="">
   </div>
@@ -128,7 +128,7 @@ You can set heights using classes like `.form-control-lg` and `.form-control-sm`
 ```html
 <div class="form-group">
   <label for="image-uplaod">Image uploader optional label</label>
-  <div class="dropzone-control w-50">
+  <div class="dropzone-control">
     <div class="dropzone-overlay d-none">
       <img class="m-auto" src="./assets/svg/preloaders--circular-preloader.svg" alt="">
     </div>

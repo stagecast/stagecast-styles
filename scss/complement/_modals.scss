@@ -1,0 +1,42 @@
+.modal {
+  .close {
+    color: var(--text-high-emph);
+
+    @include hover() {
+      color: var(--text-medium-emph);
+      text-decoration: none;
+    }
+  }
+}
+
+.modal-title-img {
+  $width-addition: $modal-header-padding-x + $modal-header-padding-x;
+  width: calc(100% + #{$width-addition});
+  margin: -1 * $modal-header-padding-x;
+
+  & + .delete {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: map-get($spacers, 5);
+  }
+}
+
+.modal-celebration {
+  .modal-body {
+    text-align: center;
+  }
+  .modal-footer {
+    text-align: center;
+
+    & > * {
+      margin: 0;
+    }
+
+    & > .modal-footer-desc {
+      width: 100%;
+      color: $text-no-emph;
+      margin-top: map-get($spacers, 2);
+    }
+  }
+}

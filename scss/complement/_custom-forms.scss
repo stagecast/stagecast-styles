@@ -39,6 +39,7 @@
   border: $custom-dropzone-border-color solid $custom-dropzone-border-width;
   border-radius: $custom-dropzone-border-radius;
   padding: $custom-dropzone-padding-x $custom-dropzone-padding-y;
+  background-color: $custom-dropzone-bg;
   & > input[type="file"] {
     display: none;
   }
@@ -60,33 +61,14 @@
 
   .dropzone-preview {
     button.delete {
-      background: var(--z-space-00);
-      border-radius: 50%;
-      margin: map-get($spacers, 2);
-      border: none;
-      box-shadow: none;
-      height: 24px;
-      width: 24px;
-      padding: 0;
       position: absolute;
       right: 0;
       display: none;
-
-      @include font-size($close-font-size);
-      font-weight: $close-font-weight;
-      line-height: $input-btn-line-height;
-      color: var(--text-medium-emph);
-      text-shadow: $close-text-shadow;
-
-      // Override <a>'s hover style
-      @include hover() {
-        color: var(--text-high-emph);
-        text-decoration: none;
-      }
+      margin: map-get($spacers, 2);
     }
 
     .dropzone-preview-img {
-      background: var(--z-space-01);
+      background: var(--z-space-02);
       border-radius: $custom-dropzone-border-radius;
       /* margin: 0 5px 0 10px; */
       width: 100%;
