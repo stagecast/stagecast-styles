@@ -41,7 +41,11 @@ new Docute({
     loaderSecondaryColor:  'var(--z-space-08)',
     tableHeaderBackground:  'var(--z-space-02)',
     tableHeaderColor:  'var(--text-high-emph)',
-    searchIconColor:  'var(--text-high-emph)'
+    searchIconColor:  'var(--text-high-emph)',
+    codeBlockBackground:  'var(--z-space-02)',
+    codeBlockTextColor:  'var(--text-high-emph)',
+    highlightedLineBackground: 'var(--z-space-24)',
+    highlightedLineBorderColor: 'var(--primary-dark)'
   },
   footer: `
   <div style="border-top:1px solid var(--border-color);padding-top:30px;margin: 40px 0;color:#999999;font-size: .9rem;">

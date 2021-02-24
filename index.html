@@ -31,6 +31,15 @@
         font-size: 16px!important;
       }
 
+      .header-inner {
+        font-weight: 600;
+      }
+
+      a:hover {
+        color: var(--primary-light);
+        text-decoration: none;
+      }
+
       iframe {
         width: 100%;
         display: flex;
@@ -39,12 +48,20 @@
         border-top-left-radius: 6px;
         border-bottom-right-radius: 0px;
         border-bottom-left-radius: 0px;
+        min-height: 150px;
       }
 
       iframe + .pre-wrapper {
         margin-top: 0!important;
         border-top-right-radius: 0px!important;
         border-top-left-radius: 0px!important;
+      }
+
+      .token.tag, .token.punctuation {
+        color: var(--primary-light);
+      }
+      .token.attr-name {
+        color: var(--success-light);
       }
     </style>
   </head>
