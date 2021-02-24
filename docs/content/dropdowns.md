@@ -1,22 +1,4 @@
 # Dropdowns
-<style>
-  iframe {
-    width: 100%;
-    display: flex;
-    border: 1px solid rgb(225, 228, 232);
-    border-top-right-radius: 6px;
-    border-top-left-radius: 6px;
-    border-bottom-right-radius: 0px;
-    border-bottom-left-radius: 0px;
-    min-height: 200px;
-  }
-
-  iframe + .pre-wrapper {
-    margin-top: 0!important;
-    border-top-right-radius: 0px!important;
-    border-top-left-radius: 0px!important;
-  }
-</style>
 
 <iframe title="Dropdown" height="300" src="./docs/examples/dropdowns.html"></iframe>
 

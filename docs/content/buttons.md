@@ -1,21 +1,3 @@
-<style>
-  iframe {
-    width: 100%;
-    display: flex;
-    border: 1px solid var(--z-space-24);
-    border-top-right-radius: 6px;
-    border-top-left-radius: 6px;
-    border-bottom-right-radius: 0px;
-    border-bottom-left-radius: 0px;
-  }
-
-  iframe + .pre-wrapper {
-    margin-top: 0!important;
-    border-top-right-radius: 0px!important;
-    border-top-left-radius: 0px!important;
-  }
-</style>
-
 # Buttons
 
 Buttons are used for **actions**, like in forms, while textual hyperlinks are used for **destinations**, or moving from one page to another.
@@ -23,7 +5,7 @@ Buttons are used for **actions**, like in forms, while textual hyperlinks are us
 ## Default button
 
 Classic buttons are the core of our system, they are used to signal an interactive action.
-<iframe title="Buttons" :src="'./docs/examples/buttons.html'"></iframe>
+<iframe title="Buttons" src="'./docs/examples/buttons.html'"></iframe>
 
 ```html {highlight: [2]}
   <button type="button" class="btn mr-3">Default</button>
