@@ -607,6 +607,7 @@
         <span class="badge badge-info">Info</span>
       </div>
 
+      <!-- Blankstate -->
       <div class="col-12 mt-4">
 
         <div class="blankstate w-50">
@@ -620,6 +621,106 @@
         </div>
       </div>
 
+      <!-- Avatars -->
+      <div class="col-12 mt-4">
+        <div>
+          <img class="avatar" alt="jonrohan" src="./showcase-assets/avatar-img.jpg" width="48" height="48" />
+        </div>
+        <div>
+          <img class="avatar avatar-sm" alt="jonrohan" src="./showcase-assets/avatar-img.jpg" width="20" height="20" />
+          <img class="avatar" alt="jonrohan" src="./showcase-assets/avatar-img.jpg" width="20" height="20" />
+          <img class="avatar avatar-lg" alt="jonrohan" src="./showcase-assets/avatar-img.jpg" width="20" height="20" />
+        </div>
+        <div>
+          <div class="avatar-parent-child d-inline-flex">
+            <img class="avatar avatar-lg" alt="jonrohan" src="./showcase-assets/avatar-img.jpg" width="48" height="48" />
+            <img class="avatar avatar-child" alt="josh" src="./showcase-assets/john.jpg" width="20" height="20" />
+          </div>
+        </div>
+
+        <div>
+          <div class="avatar avatar-primary">R</div>
+          <div class="avatar avatar-secondary">R</div>
+          <div class="avatar avatar-success">R</div>
+          <div class="avatar avatar-danger">R</div>
+          <div class="avatar avatar-warning">R</div>
+          <div class="avatar avatar-danger">R</div>
+        </div>
+      </div>
+
+      <!-- Add contacts -->
+      <div>
+        <div class="modal fade show" id="exampleModal4" style="display: block;" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="exampleModalLabel">Workspace Members</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>Manage what users can access by setting workspace roles. <i data-feather="help-circle"></i></p>
+
+                <div class="container-fluid">
+                  <div class="row align-items-center">
+                    <div class="col-6 p-0">
+                      <h3 class="h5 m-0">1/5 Members</h3>
+                    </div>
+                    <div class="col-6 p-0">
+                      <div class="form-group mb-0">
+                        <div class="input-group has-validation">
+                          <input type="email" class="form-control icon-prepend" data-icon="mail" placeholder="Type email...">
+                          <div class="input-group-append">
+                            <button class="btn btn-primary" type="button" id="button-addon1">Invite Members</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row mt-5">
+                    <div class="col-12 d-flex rounded p-4 align-items-center" style="background: var(--z-space-01);">
+                      <div class="avatar avatar-primary">R</div>
+                      <div class="flex-grow-1 mx-4">Robin Bugdahn</div>
+                      <div class="flex-grow-1 mx-4">bugdahn-robin@t-online.de</div>
+                      <div class="dropdown d-inline-block mr-2">
+                        <button class="btn btn-sm btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Admin
+                          <i class="post-icon align-bottom" data-feather="chevron-down"></i>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <button class="dropdown-item active" href="#"><i class="pre-icon mr-3" data-feather="user"></i>Admin</button>
+                          <button class="dropdown-item" href="#"><i class="pre-icon mr-3" data-feather="user"></i>Owner</button>
+                          <button class="dropdown-item" href="#"><i class="pre-icon mr-3" data-feather="user"></i>Member</button>
+                        </div>
+                      </div>
+                      <button type="button" class="btn"><i data-feather="more-vertical"></i></button>
+                    </div>
+                    <div class="col-12 d-flex rounded p-4 mt-1 align-items-center" style="background: var(--z-space-01);">
+                      <div class="avatar avatar-primary">R</div>
+                      <div class="flex-grow-1 mx-4">Robin Bugdahn</div>
+                      <div class="flex-grow-1 mx-4">bugdahn-robin@t-online.de</div>
+                      <div class="dropdown d-inline-block mr-2">
+                        <button class="btn btn-sm btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Admin
+                          <i class="post-icon align-bottom" data-feather="chevron-down"></i>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <button class="dropdown-item active" href="#"><i class="pre-icon mr-3" data-feather="user"></i>Admin</button>
+                          <button class="dropdown-item" href="#"><i class="pre-icon mr-3" data-feather="user"></i>Owner</button>
+                          <button class="dropdown-item" href="#"><i class="pre-icon mr-3" data-feather="user"></i>Member</button>
+                        </div>
+                      </div>
+                      <button type="button" class="btn"><i data-feather="more-vertical"></i></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>

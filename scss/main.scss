@@ -3,9 +3,8 @@
 // You can override them here
 
 @import "bootstrap/scss/functions"; // Required
-@import "./overrides/variables"; // Stagecast overrides of bootstrap/scss/variables (Required)
-@import "./overrides/mixins"; // Stagecast overrides of bootstrap/scss/mixins (Required)
-@import "./overrides/close";
+@import "./bootstrap-overrides/variables"; // Stagecast overrides of bootstrap/scss/variables (Required)
+@import "./bootstrap-overrides/mixins"; // Stagecast overrides of bootstrap/scss/mixins (Required)
 
 // For all the other non-root variables, you can override them here. Here you can also use
 // bootstrap variables that you haven't used before because they weren't imported
@@ -20,7 +19,7 @@
 @import "bootstrap/scss/grid";
 // @import "bootstrap/scss/tables";
 @import "bootstrap/scss/forms";
-@import "overrides/buttons"; // override of "bootstrap/scss/buttons"
+@import "bootstrap-overrides/buttons"; // override of "bootstrap/scss/buttons"
 @import "bootstrap/scss/transitions";
 @import "bootstrap/scss/dropdown";
 // @import "bootstrap/scss/button-group";
@@ -37,7 +36,7 @@
 @import "bootstrap/scss/progress";
 // @import "bootstrap/scss/media";
 // @import "bootstrap/scss/list-group";
-// @import "bootstrap/scss/close";
+@import "bootstrap-overrides/close";
 // @import "bootstrap/scss/toasts";
 @import "bootstrap/scss/modal"; // Requires transitions
 // @import "bootstrap/scss/tooltip";
@@ -48,6 +47,11 @@
 // @import "bootstrap/scss/print";
 
 // Custom styles
+
+// additional variables for elements external to bootstrap framework
+@import "complement/variables";
+
+@import "complement/avatars";
 @import "complement/background";
 @import "complement/badge";
 @import "complement/blankstate";

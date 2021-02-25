@@ -1,0 +1,60 @@
+@mixin avatar-size($size, $font-size, $line-height) {
+  width: $size;
+  height: $size;
+  font-size: $font-size;
+  line-height: $line-height;
+
+  &:not(img) {
+    padding: ($size - $line-height) / 2;
+  }
+}
+
+.avatar {
+  display: inline-block;
+  overflow: hidden; // Ensure page layout in Firefox should images fail to load
+  font-size: $avatar-font-size;
+  line-height: $avatar-line-height;
+  vertical-align: middle;
+  text-align: center;
+  border-radius: $avatar-border-radius;
+  font-weight: $avatar-font-weight;
+  @include avatar-size($avatar-size, $avatar-font-size, $avatar-line-height);
+}
+
+
+.avatar-link {
+  float: left;
+  line-height: $avatar-line-height;
+}
+
+.avatar-group-item {
+  display: inline-block;
+  margin-bottom: 3px;
+}
+
+.avatar-sm, .avatar-child { @include avatar-size($avatar-size-sm, $avatar-font-size-sm, $avatar-line-height-sm); }
+.avatar-lg { @include avatar-size($avatar-size-lg, $avatar-font-size-lg, $avatar-line-height-lg); }
+
+// Avatar parent child
+
+.avatar-parent-child {
+  position: relative;
+}
+
+.avatar-child {
+  position: absolute;
+  right: -15%;
+  bottom: -9%;
+  background-color: $z-space-06; // For transparent backgrounds
+  // stylelint-disable-next-line primer/borders
+  border-radius: $border-radius;
+  // stylelint-disable-next-line primer/box-shadow
+  box-shadow: -2px -2px 0 rgba($z-space-00, 0.8);
+}
+
+@each $color, $value in $theme-colors {
+  .avatar-#{$color} {
+    color: color-yiq($value);
+    background: $value;
+  }
+}
