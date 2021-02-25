@@ -1,0 +1,17 @@
+@mixin badge-variant($bg) {
+  color: $bg;
+  background-color: rgba($bg, 0.12);
+
+  @at-root a#{&} {
+    @include hover-focus() {
+      color: $bg;
+      background-color: rgba($bg, 0.12);
+    }
+
+    &:focus,
+    &.focus {
+      outline: 0;
+      box-shadow: 0 0 0 $badge-focus-width rgba($bg, .5);
+    }
+  }
+}

@@ -31,7 +31,7 @@
 // @import "bootstrap/scss/card";
 // @import "bootstrap/scss/breadcrumb";
 // @import "bootstrap/scss/pagination";
-// @import "bootstrap/scss/badge";
+@import "bootstrap/scss/badge";
 // @import "bootstrap/scss/jumbotron";
 @import "bootstrap/scss/alert";
 @import "bootstrap/scss/progress";
@@ -49,6 +49,8 @@
 
 // Custom styles
 @import "complement/background";
+@import "complement/badge";
+@import "complement/blankstate";
 @import "complement/custom-forms";
 @import "complement/dropdown";
 @import "complement/forms";
@@ -73,4 +75,8 @@
 svg {
   width: 16px;
   height: 16px;
+}
+
+svg.align-bottom {
+  vertical-align: bottom;
 }

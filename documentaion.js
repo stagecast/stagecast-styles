@@ -19,6 +19,9 @@ new Docute({
       title: 'Guide',
       links: [
         { title: 'Alerts', link: '/alerts' },
+        { title: 'Avatars', link: '/avatars' },
+        { title: 'Badges', link: '/badges' },
+        { title: 'Blankstate', link: '/blankstate' },
         { title: 'Buttons', link: '/buttons' },
         { title: 'Color system', link: '/colors' },
         { title: 'Forms', link: '/forms' },

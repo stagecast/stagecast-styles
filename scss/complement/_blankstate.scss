@@ -1,0 +1,18 @@
+.blankstate {
+  position: relative;
+  padding: map-get($spacers, 6);
+  text-align: center;
+  border: $border-width solid $border-color;
+  border-radius: $border-radius;
+
+  .circle-wrapper {
+    border-radius: 50%;
+    background-color: rgba($primary, 0.12);
+    display: inline-block;
+    padding: map-get($spacers, 2)
+  }
+  & img {
+    width: 56px;
+    height: 56px;
+  }
+}

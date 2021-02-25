@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <title>Stagecast v3</title>
   </head>
-  <body style="padding: 32px">
+  <body style="padding: 48px 32px">
     <div class="row mx-auto">
       <!-- Intro -->
       <div class="col-12 mb-4">
@@ -339,6 +339,21 @@
             <button class="dropdown-item disabled" href="#"><i class="pre-icon mr-3" data-feather="edit-3"></i>Disabled</button>
           </div>
         </div>
+
+        <div class="dropdown">
+          <button class="btn btn-sm btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Toggle Menu
+            <i class="post-icon align-bottom" data-feather="chevron-down"></i>
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <button class="dropdown-item active" href="#"><i class="pre-icon mr-3" data-feather="copy"></i>Duplicate</button>
+            <button class="dropdown-item" href="#"><i class="pre-icon mr-3" data-feather="edit-3"></i>Edit</button>
+            <button class="dropdown-item" href="#"><i class="pre-icon mr-3" data-feather="tag"></i>Action long title</button>
+            <div class="dropdown-divider"></div>
+            <button class="dropdown-item text-danger" href="#"><i class="pre-icon mr-3" data-feather="trash-2"></i>Delete item</button>
+            <button class="dropdown-item disabled" href="#"><i class="pre-icon mr-3" data-feather="edit-3"></i>Disabled</button>
+          </div>
+        </div>
       </div>
 
       <!-- Progress -->
@@ -485,10 +500,11 @@
         </div>
       </div>
 
-
-      <button type="button" class="btn btn-ghost-primary" data-toggle="modal" data-target="#exampleModal">Open the modal!</button>
-      <button type="button" class="btn btn-ghost-primary" data-toggle="modal" data-target="#exampleModal2">Open the modal 2!</button>
-      <button type="button" class="btn btn-ghost-primary" data-toggle="modal" data-target="#exampleModal3">Open the modal 3!</button>
+      <div class="col-12 mt-4">
+        <button type="button" class="btn btn-ghost-primary" data-toggle="modal" data-target="#exampleModal">Open the modal!</button>
+        <button type="button" class="btn btn-ghost-primary" data-toggle="modal" data-target="#exampleModal2">Open the modal 2!</button>
+        <button type="button" class="btn btn-ghost-primary" data-toggle="modal" data-target="#exampleModal3">Open the modal 3!</button>
+      </div>
 
       <!-- Modals -->
       <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -579,6 +595,31 @@
           </div>
         </div>
       </div>
+
+      <!-- Badges -->
+      <div class="col-12 mt-4">
+        <div>badges </div>
+        <span class="badge badge-primary">Primary</span>
+        <span class="badge badge-secondary">Secondary</span>
+        <span class="badge badge-success">Success</span>
+        <span class="badge badge-danger">Danger</span>
+        <span class="badge badge-warning">Warning</span>
+        <span class="badge badge-info">Info</span>
+      </div>
+
+      <div class="col-12 mt-4">
+
+        <div class="blankstate w-50">
+          <div class="circle-wrapper mb-4">
+            <img src="./showcase-assets/blankstate-img.png" alt="">
+          </div>
+          <h1 class="h3">This is a blank state</h1>
+          <p style="color: var(--text-no-emph)">Use it to provide information when no dynamic content exists.</p>
+          <button class="btn btn-primary my-4">Call to Action</button>
+          <p class="mb-0"><a class="btn btn-link">Learn More</a></p>
+        </div>
+      </div>
+
     </div>
 
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>

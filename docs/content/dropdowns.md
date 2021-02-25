@@ -7,8 +7,9 @@ Common options available in the dropdown include
 - **Duplicating**
 - **Deleting**
 
+## Showcase
 
-<iframe title="Dropdown" height="300" src="./docs/examples/dropdowns.html"></iframe>
+<iframe title="Dropdown" height="270" src="./docs/examples/dropdowns.html"></iframe>
 
 ```html {highlight: [2]}
   <div class="dropdown">
@@ -24,4 +25,22 @@ Common options available in the dropdown include
       <button class="dropdown-item disabled" href="#"><i class="pre-icon mr-3" data-feather="edit-3"></i>Disabled</button>
     </div>
   </div>
+```
+
+## Sizing and colors
+
+<iframe title="Dropdown sizes and colors" height="230" src="./docs/examples/dropdowns-variants.html"></iframe>
+
+```html
+<div class="dropdown">
+  <button class="btn btn-sm btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Admin
+    <i class="post-icon align-bottom" data-feather="chevron-down"></i>
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <button class="dropdown-item active" href="#"><i class="pre-icon mr-3" data-feather="user"></i>Admin</button>
+    <button class="dropdown-item" href="#"><i class="pre-icon mr-3" data-feather="user"></i>Owner</button>
+    <button class="dropdown-item" href="#"><i class="pre-icon mr-3" data-feather="user"></i>Member</button>
+  </div>
+</div>
 ```
