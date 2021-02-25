@@ -106,9 +106,16 @@ You can set heights using classes like `.form-control-lg` and `.form-control-sm`
 
 ### Default
 
-<iframe title="Uploder" height="180" src="./docs/examples/forms-uploder-1.html"></iframe>
+<iframe title="Uploder" height="260" src="./docs/examples/forms-uploder-1.html"></iframe>
 
 ```html
+<!-- Compact uploader -->
+<div class="dropzone-control dropzone-control-compact mb-4">
+  <input type="file" id="immUploader2" name="image-upload" multiple accept="img/*">
+  <label class="dropzone-control-label" for="immUploader2"></label>
+</div>
+
+<!-- Normal uploader -->
 <div class="dropzone-control">
   <div class="dropzone-overlay d-none">
     <img class="m-auto" src="./assets/svg/preloaders--circular-preloader.svg" alt="">
@@ -119,6 +126,7 @@ You can set heights using classes like `.form-control-lg` and `.form-control-sm`
     <div style="color: var(--text-medium-emph)">You can add 2 images</div>
   </label>
 </div>
+
 ```
 
 ### Inside Form Control

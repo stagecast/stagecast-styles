@@ -1,5 +1,12 @@
 # Alerts
 
+In our products the alert component is used both as:
+- **actual alert**
+- **toast notification.**
+
+With **alert** we mean messages with a need of immediate attention. The window/container is usually locked, meaning you can't dismiss the box or continue with what you want to do until you explicitly acknowledge the content, this is usually done by clicking a button inside the container. The buttons on this window are usually "OK" or "Cancel". They might also be used to signal a critical error in the product that could belong both to fron-end and backend-end.
+
+With **toast notification** we mean a small message that shows up in a box at the bottom of the screen and disappears on its own after few seconds. It is a simple feedback about an operation in which current activity remains visible. It basically is to inform the user of something that is not critical and that does not require specific attention and does not prevent the user from using the rest of the website. The notification doesn't lock the view underneath nor is it interactive. It can include links to redirect the user somewhere else.
 ## Dismissable alerts
 
 <iframe title="Alerts" height="270" src="./docs/examples/alerts.html"></iframe>

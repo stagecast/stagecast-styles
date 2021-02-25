@@ -1116,7 +1116,7 @@ $modal-backdrop-opacity:            .5 !default;
 $modal-header-border-color:         $border-color !default;
 $modal-footer-border-color:         transparent !default;
 $modal-header-border-width:         $modal-content-border-width !default;
-$modal-footer-border-width:         $modal-header-border-width !default;
+$modal-footer-border-width:         0 !default;
 $modal-header-padding-y:            map-get($spacers, 5) !default;
 $modal-header-padding-x:            map-get($spacers, 5) !default;
 $modal-header-padding:              $modal-header-padding-y $modal-header-padding-x !default; // Keep this for backwards compatibility
