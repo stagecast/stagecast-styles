@@ -10,6 +10,10 @@ new Docute({
       link: '/'
     },
     {
+      title: 'Layouts',
+      link: 'https://github.com/stagecast/stagecast-styles/layouts'
+    },
+    {
       title: 'Github',
       link: 'https://github.com/stagecast/stagecast-styles'
     }
