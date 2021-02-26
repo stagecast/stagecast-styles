@@ -22,6 +22,7 @@ In general we use avatars for:
 <img class="avatar avatar-sm" alt="robin" src="./showcase-assets/avatar-img.jpg" width="20" height="20" />
 <img class="avatar" alt="robin" src="./showcase-assets/avatar-img.jpg" width="20" height="20" />
 <img class="avatar avatar-lg" alt="robin" src="./showcase-assets/avatar-img.jpg" width="20" height="20" />
+<img class="avatar avatar-xl" alt="robin" src="./showcase-assets/avatar-img.jpg" width="20" height="20" />
 ```
 
 ### Textual and theme colors
