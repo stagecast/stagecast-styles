@@ -843,7 +843,7 @@ $zindex-tooltip:                    1070 !default;
 // Navs
 
 $nav-link-padding-y:                8px !default;
-$nav-link-padding-x:                1rem !default;
+$nav-link-padding-x:                8px !default;
 $nav-link-disabled-color:           $gray-600 !default;
 
 $nav-tabs-border-color:             $gray-300 !default;
@@ -861,6 +861,10 @@ $nav-pills-link-active-bg:          $component-active-bg !default;
 $nav-divider-color:                 $gray-200 !default;
 $nav-divider-margin-y:              $spacer / 2 !default;
 
+// Added: nav indicator
+$nav-active-indicator-width:        4px !default;
+$nav-active-indicator-height:       32px !default;
+$nav-active-indicator-color:        $primary !default;
 
 // Navbar
 
