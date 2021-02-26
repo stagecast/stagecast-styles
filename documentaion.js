@@ -11,7 +11,7 @@ new Docute({
     },
     {
       title: 'Layouts',
-      link: 'https://github.com/stagecast/stagecast-styles/layouts'
+      link: 'https://stagecast.github.io/stagecast-style/layouts/'
     },
     {
       title: 'Github',
