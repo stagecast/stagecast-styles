@@ -27,7 +27,7 @@
       margin: 0;
       background: $nav-active-indicator-color;
       border: none;
-      border-radius: $nav-active-indicator-width / 2;
+      border-radius: $nav-active-indicator-height / 2;
       transition: .15s cubic-bezier(0.175, 0.885, 0.32, 1.1);
     }
   }
@@ -46,32 +46,32 @@
   .nav-item:nth-child(2):active ~ hr,
   .nav-item:nth-child(2):focus ~ hr,
   .nav-item:nth-child(2).active ~ hr  {
-    left: $nav-link-padding-y + 1 * ($nav-active-indicator-height  + 2 * $nav-link-padding-y);
+    left: $nav-link-padding-x + 1 * ($nav-active-indicator-width  + 2 * $nav-link-padding-x);
   }
 
   .nav-item:nth-child(3):active ~ hr,
   .nav-item:nth-child(3):focus ~ hr,
   .nav-item:nth-child(3).active ~ hr {
-    left: $nav-link-padding-y + 2 * ($nav-active-indicator-height  + 2 * $nav-link-padding-y);
+    left: $nav-link-padding-x + 2 * ($nav-active-indicator-width  + 2 * $nav-link-padding-x);
   }
 
   .nav-item:nth-child(4):active ~ hr,
   .nav-item:nth-child(4):focus ~ hr,
   .nav-item:nth-child(4).active ~ hr {
-    left: $nav-link-padding-y + 3 * ($nav-active-indicator-height  + 2 * $nav-link-padding-y);
+    left: $nav-link-padding-x + 3 * ($nav-active-indicator-width  + 2 * $nav-link-padding-x);
   }
 
   .nav-item:nth-child(5):active ~ hr,
   .nav-item:nth-child(5):focus ~ hr,
   .nav-item:nth-child(5).active ~ hr {
-    left: $nav-link-padding-y + 4 * ($nav-active-indicator-height  + 2 * $nav-link-padding-y);
+    left: $nav-link-padding-x + 4 * ($nav-active-indicator-width  + 2 * $nav-link-padding-x);
   }
 
   hr {
-    width: $nav-active-indicator-height;
-    height: $nav-active-indicator-width;
-    top: $nav-link-padding-y * 2 + $nav-active-indicator-height;
-    left: $nav-link-padding-y;
+    width: $nav-active-indicator-width;
+    height: $nav-active-indicator-height;
+    bottom: -1 * $nav-link-padding-y / 2;
+    left: $nav-link-padding-x;
   }
 }
 
@@ -79,32 +79,32 @@
   .nav-item:nth-child(2):active ~ hr,
   .nav-item:nth-child(2):focus ~ hr,
   .nav-item:nth-child(2).active ~ hr {
-    top: $nav-link-padding-y + 1 * ($nav-active-indicator-height  + 2 * $nav-link-padding-y);
+    top: $nav-link-padding-y + 1 * ($nav-active-indicator-width  + 2 * $nav-link-padding-y);
   }
 
   .nav-item:nth-child(3):active ~ hr,
   .nav-item:nth-child(3):focus ~ hr,
   .nav-item:nth-child(3).active ~ hr {
-    top: $nav-link-padding-y + 2 * ($nav-active-indicator-height  + 2 * $nav-link-padding-y);
+    top: $nav-link-padding-y + 2 * ($nav-active-indicator-width  + 2 * $nav-link-padding-y);
   }
 
   .nav-item:nth-child(4):active ~ hr,
   .nav-item:nth-child(4):focus ~ hr,
   .nav-item:nth-child(4).active ~ hr {
-    top: $nav-link-padding-y + 3 * ($nav-active-indicator-height  + 2 * $nav-link-padding-y);
+    top: $nav-link-padding-y + 3 * ($nav-active-indicator-width  + 2 * $nav-link-padding-y);
   }
 
   .nav-item:nth-child(5):active ~ hr,
   .nav-item:nth-child(5):focus ~ hr,
   .nav-item:nth-child(5).active ~ hr {
-    top: $nav-link-padding-y + 4 * ($nav-active-indicator-height  + 2 * $nav-link-padding-y);
+    top: $nav-link-padding-y + 4 * ($nav-active-indicator-width  + 2 * $nav-link-padding-y);
   }
 
   hr {
-    width: $nav-active-indicator-width;
-    height: $nav-active-indicator-height;
+    width: $nav-active-indicator-height;
+    height: $nav-active-indicator-width;
     top: $nav-link-padding-y;
-    left: -1 * $nav-active-indicator-width;
+    left: 0;
   }
 }
 

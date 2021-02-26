@@ -82,6 +82,11 @@ svg {
   width: 16px;
   height: 16px;
 }
+a {
+  svg, img {
+    vertical-align: text-bottom;
+  }
+}
 
 svg.align-bottom {
   vertical-align: bottom;

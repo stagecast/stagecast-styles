@@ -286,7 +286,7 @@ $body-color:                $text-high-emph !default;
 
 $link-color:                              theme-color("primary") !default;
 $link-decoration:                         none !default;
-$link-hover-color:                        darken($link-color, 15%) !default;
+$link-hover-color:                        map-get($theme-color-variants, "primary-light") !default;
 $link-hover-decoration:                   underline !default;
 // Darken percentage for links with `.text-*` class (e.g. `.text-success`)
 $emphasized-link-hover-darken-percentage: 15% !default;
@@ -843,7 +843,7 @@ $zindex-tooltip:                    1070 !default;
 // Navs
 
 $nav-link-padding-y:                8px !default;
-$nav-link-padding-x:                8px !default;
+$nav-link-padding-x:                12px !default;
 $nav-link-disabled-color:           $gray-600 !default;
 
 $nav-tabs-border-color:             $gray-300 !default;
@@ -862,8 +862,8 @@ $nav-divider-color:                 $gray-200 !default;
 $nav-divider-margin-y:              $spacer / 2 !default;
 
 // Added: nav indicator
-$nav-active-indicator-width:        4px !default;
-$nav-active-indicator-height:       32px !default;
+$nav-active-indicator-height:        4px !default;
+$nav-active-indicator-width:       32px !default;
 $nav-active-indicator-color:        $primary !default;
 
 // Navbar

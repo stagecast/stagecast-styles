@@ -9,12 +9,12 @@
         <link rel="stylesheet" href="../../assets/css/main.css">
         <div class="frame-example">
           <nav class="nav with-dynamic-active-indicator">
-            <a class="nav-item nav-link active">Presenter</a>
-            <a class="nav-item nav-link active">A</a>
-            <a class="nav-item nav-link">Participant</a>
-            <a class="nav-item nav-link">Admin</a>
-            <a class="nav-item nav-link">Moderation</a>
-            <a class="nav-item nav-link">Info</a>
+            <a class="nav-item nav-link active">This</a>
+            <a class="nav-item nav-link">Is</a>
+            <a class="nav-item nav-link">A</a>
+            <a class="nav-item nav-link">Variable</a>
+            <a class="nav-item nav-link">Width</a>
+            <a class="nav-item nav-link">Navigation</a>
             <hr class="active-indicator" />
           </nav>
 
@@ -35,7 +35,7 @@
                 $('a.nav-link.active').removeClass("active");
                 $(this).addClass("active");
                 const navDynamicActiveElement = $('.nav.with-dynamic-active-indicator .active');
-                const leftPosition = navDynamicActiveElement.offset().left - navDynamicActiveElement.parent().offset().left + 8;
+                const leftPosition = navDynamicActiveElement.offset().left - navDynamicActiveElement.parent().offset().left + parseInt(navDynamicActiveElement.css('padding-left'));
                 navDynamicIndicator.css({ left: leftPosition, width: navDynamicActiveElement.width() });
               });
 
