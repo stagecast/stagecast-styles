@@ -12,22 +12,34 @@
 //   }
 // }
 
-.nav-link:focus {
-  outline: none;
-}
+.nav {
+  &.flex-column {
+    display: inline-flex;
+  }
 
-.nav.with-active-indicator, .nav.with-active-vertical-indicator {
-  position: relative;
+  &.with-active-indicator, &.with-active-vertical-indicator {
+    position: relative;
 
-  hr {
-    position: absolute;
-    margin: 0;
-    background: $nav-active-indicator-color;
-    border: none;
-    border-radius: $nav-active-indicator-width / 2;
-    transition: .15s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+    hr {
+      position: absolute;
+      margin: 0;
+      background: $nav-active-indicator-color;
+      border: none;
+      border-radius: $nav-active-indicator-width / 2;
+      transition: .15s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+    }
   }
 }
+
+.nav-link {
+  cursor: pointer;
+  display: inline-block;
+
+  &:focus {
+    outline: none;
+  }
+}
+
 .with-active-indicator {
   .nav-item:nth-child(2):active ~ hr,
   .nav-item:nth-child(2):focus ~ hr,

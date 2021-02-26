@@ -21,7 +21,7 @@
     <div class="avatar avatar-primary">S</div>
   </a>
   <a class="nav-item nav-link">
-    <button class="btn btn-sm">
+    <button class="btn avatar">
       <i data-feather="plus"></i>
     </button>
   </a>
@@ -48,7 +48,7 @@
     <div class="avatar avatar-primary">S</div>
   </a>
   <a class="nav-item nav-link">
-    <button class="btn">
+    <button class="btn avatar">
       <i data-feather="plus"></i>
     </button>
   </a>
