@@ -1,7 +1,46 @@
 # Nav
 
+## Underlined Navigation
+
+### JQuery-powered moving indicator
+
+<iframe title="Underlined Nav" height="150" src="./docs/examples/nav-underline-icons.html"></iframe>
+
+```html
+<nav class="nav with-dynamic-active-indicator">
+  <a class="nav-item nav-link active">
+    <i class="pre-icon mr-3" data-feather="monitor"></i>Presenter
+  </a>
+  <a class="nav-item nav-link active">
+    <i class="pre-icon mr-3" data-feather="smartphone"></i>Participant
+  </a>
+  <a class="nav-item nav-link active">
+    <i class="pre-icon mr-3" data-feather="sliders"></i>Moderator
+  </a>
+  <hr class="active-indicator" />
+</nav>
+```
+
+
+### With dynamic moving indicator
+
+<iframe title="Underlined Nav" height="150" src="./docs/examples/nav-underline.html"></iframe>
+
+```html
+<nav class="nav with-dynamic-active-indicator">
+  <a class="nav-item nav-link active">Presenter</a>
+  <a class="nav-item nav-link active">A</a>
+  <a class="nav-item nav-link">Participant</a>
+  <a class="nav-item nav-link">Admin</a>
+  <a class="nav-item nav-link">Moderation</a>
+  <a class="nav-item nav-link">Info</a>
+  <hr class="active-indicator" />
+</nav>
+```
+
 ## Workspaces
 
+Worspaces use avatars as navigation items.
 ### Vertical nav
 
 <iframe title="Vertical nav" height="300" src="./docs/examples/nav-workspace-vertical.html"></iframe>
@@ -55,3 +94,4 @@
   <hr class="active-indicator" />
 </nav>
 ```
+

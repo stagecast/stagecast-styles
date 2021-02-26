@@ -651,16 +651,16 @@
       <!-- Nav tabs -->
       <div class="col-12">
         <nav class="nav flex-column with-active-vertical-indicator">
-          <a id="link1" class="nav-item nav-link" href="#link1">
+          <a class="nav-item nav-link">
             <div class="avatar avatar-primary">F</div>
           </a>
-          <a id="link2" class="nav-item nav-link" href="#link2">
+          <a class="nav-item nav-link">
             <div class="avatar avatar-primary">R</div>
           </a>
-          <a id="link3" class="nav-item nav-link" href="#link3">
+          <a class="nav-item nav-link">
             <div class="avatar avatar-primary">J</div>
           </a>
-          <a id="link4" class="nav-item nav-link" href="#link4">
+          <a class="nav-item nav-link">
             <div class="avatar avatar-primary">S</div>
           </a>
           <a class="nav-item nav-link">
@@ -675,22 +675,47 @@
       <!-- Nav tabs row -->
       <div class="col-12">
         <nav class="nav flex-row with-active-indicator">
-          <a id="link10" class="nav-item nav-link" href="#link10">
+          <a class="nav-item nav-link">
             <div class="avatar avatar-primary">F</div>
           </a>
-          <a id="link20" class="nav-item nav-link" href="#link20">
+          <a class="nav-item nav-link">
             <div class="avatar avatar-primary">R</div>
           </a>
-          <a id="link30" class="nav-item nav-link" href="#link30">
+          <a class="nav-item nav-link">
             <div class="avatar avatar-primary">J</div>
           </a>
-          <a id="link40" class="nav-item nav-link" href="#link40">
+          <a class="nav-item nav-link">
             <div class="avatar avatar-primary">S</div>
           </a>
           <a class="nav-item nav-link">
             <button class="btn btn-sm">
               <i data-feather="plus"></i>
             </button>
+          </a>
+          <hr class="active-indicator" />
+        </nav>
+      </div>
+
+      <!-- Nav tabs row -->
+      <div class="col-12">
+        <nav class="nav with-dynamic-active-indicator">
+          <a class="nav-item nav-link active">
+            Presenter
+          </a>
+          <a class="nav-item nav-link active">
+            A
+          </a>
+          <a class="nav-item nav-link">
+            Participant
+          </a>
+          <a class="nav-item nav-link">
+            Admin
+          </a>
+          <a class="nav-item nav-link">
+            Moderation
+          </a>
+          <a class="nav-item nav-link">
+            Info
           </a>
           <hr class="active-indicator" />
         </nav>
@@ -734,10 +759,32 @@
           document.addEventListener("DOMContentLoaded", callbackFunction)
       }
 
-      $(document).ready(() => {
-        const navlinkList = $('#nav .nav-link');
-        console.log(navlinkList);
-      })
+      $(document).ready(function() {
+        $('.nav .nav-link').click(function() {
+          $('a.nav-link.active').removeClass("active");
+          $(this).addClass("active");
+        });
+
+        $('.nav .nav-link').click(function() {
+          $('a.nav-link.active').removeClass("active");
+          $(this).addClass("active");
+        });
+
+        const navDynamic = $('.nav.with-dynamic-active-indicator');
+        const navDynamicIndicator = $('.nav.with-dynamic-active-indicator .active-indicator');
+        const navDynamicActiveElement = $('.nav.with-dynamic-active-indicator .active');
+        navDynamic.addClass('d-inline-flex');
+        navDynamicIndicator.css({ left: navDynamicActiveElement.css('padding-left'), top: navDynamicActiveElement.outerHeight(), width: navDynamicActiveElement.width(), height: '4px' });
+
+        $('.nav.with-dynamic-active-indicator .nav-link').click(function() {
+          $('a.nav-link.active').removeClass("active");
+          $(this).addClass("active");
+          const navDynamicActiveElement = $('.nav.with-dynamic-active-indicator .active');
+          const leftPosition = navDynamicActiveElement.offset().left - navDynamicActiveElement.parent().offset().left + 8;
+          navDynamicIndicator.css({ left: leftPosition, width: navDynamicActiveElement.width() });
+        });
+
+      });
 
     </script>
   </body>

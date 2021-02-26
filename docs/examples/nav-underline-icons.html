@@ -1,0 +1,50 @@
+<html>
+<head>
+  <link rel="stylesheet" href="./frame.css">
+</head>
+<body>
+  <div class="frame-root">
+    <div class="frame-content">
+      <div>
+        <link rel="stylesheet" href="../../assets/css/main.css">
+        <div class="frame-example">
+          <nav class="nav with-dynamic-active-indicator">
+            <a class="nav-item nav-link active px-4">
+              <i class="pre-icon mr-3" data-feather="monitor"></i>Presenter
+            </a>
+            <a class="nav-item nav-link active px-4">
+              <i class="pre-icon mr-3" data-feather="smartphone"></i>Participant
+            </a>
+            <a class="nav-item nav-link active px-4">
+              <i class="pre-icon mr-3" data-feather="sliders"></i>Moderator
+            </a>
+            <hr class="active-indicator" />
+          </nav>
+
+          <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+          <script src="https://unpkg.com/feather-icons"></script>
+          <script src="../examples.js"></script>
+          <script>
+            $(document).ready(function() {
+              const navDynamic = $('.nav.with-dynamic-active-indicator');
+              const navDynamicIndicator = $('.nav.with-dynamic-active-indicator .active-indicator');
+              const navDynamicActiveElement = $('.nav.with-dynamic-active-indicator .active');
+              navDynamic.addClass('d-inline-flex');
+              navDynamicIndicator.css({ left: navDynamicActiveElement.css('padding-left'), top: navDynamicActiveElement.outerHeight(), width: navDynamicActiveElement.width(), height: '4px' });
+
+              $('.nav.with-dynamic-active-indicator .nav-link').click(function() {
+                $('a.nav-link.active').removeClass("active");
+                $(this).addClass("active");
+                const navDynamicActiveElement = $('.nav.with-dynamic-active-indicator .active');
+                const leftPosition = navDynamicActiveElement.offset().left - navDynamicActiveElement.parent().offset().left + parseInt(navDynamicActiveElement.css('padding-left'));
+                navDynamicIndicator.css({ left: leftPosition, width: navDynamicActiveElement.width() });
+              });
+
+            });
+          </script>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

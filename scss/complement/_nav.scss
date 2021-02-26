@@ -17,10 +17,12 @@
     display: inline-flex;
   }
 
-  &.with-active-indicator, &.with-active-vertical-indicator {
+  &.with-active-indicator,
+  &.with-active-vertical-indicator,
+  &.with-dynamic-active-indicator  {
     position: relative;
 
-    hr {
+    hr, .active-indicator {
       position: absolute;
       margin: 0;
       background: $nav-active-indicator-color;
