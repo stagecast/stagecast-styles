@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <title>Stagecast v3</title>
+  </head>
+  <body style="padding: 48px 32px">
+    <div class="row mx-auto">
+      <button id="modalTrigger" type="button" class="btn" data-toggle="modal" data-target="#templatesModal">Open the modal!</button>
+      <div>
+        <div class="modal fade" id="templatesModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="exampleModalLabel">Select an activation template</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="nav">
+                      <a class="nav-link active">Sport</a>
+                      <a class="nav-link active">Corporate</a>
+                      <a class="nav-link active">Music</a>
+                      <a class="nav-link active">Conferences</a>
+                    </div>
+                  </div>
+
+                  <div class="row mt-5">
+                    <!-- Voting -->
+                    <div class="col-12 d-flex rounded p-4 align-items-center" style="background: var(--z-space-01);">
+                      <img class="my-n4 ml-n4" src="../showcase-assets/voting-template-img.png" height="104"></img>
+                      <div class="flex-grow-1 ml-5">
+                        <div class="h4">Voting</div>
+                        <div style="color: var(--text-medium-emph)">Vote for your favourite League of Legends Character</div>
+                      </div>
+                      <button class="btn btn-primary">Use Template</button>
+                    </div>
+                    <!-- Photo Collage -->
+                    <div class="col-12 d-flex rounded p-4 align-items-center mt-4" style="background: var(--z-space-01);">
+                      <img class="my-n4 ml-n4" src="../showcase-assets/photo-template-img.png" height="104"></img>
+                      <div class="flex-grow-1 ml-5">
+                        <div class="h4">Photo Collage</div>
+                        <div style="color: var(--text-medium-emph)">Vote for your favourite League of Legends Character</div>
+                      </div>
+                      <button class="btn btn-primary">Use Template</button>
+                    </div>
+                    <!-- Sketch Collage -->
+                    <div class="col-12 d-flex rounded p-4 align-items-center mt-4" style="background: var(--z-space-01);">
+                      <img class="my-n4 ml-n4" src="../showcase-assets/sketch-template-img.png" height="104"></img>
+                      <div class="flex-grow-1 ml-5">
+                        <div class="h4">Sketch Collage</div>
+                        <div style="color: var(--text-medium-emph)">Vote for your favourite League of Legends Character</div>
+                      </div>
+                      <button class="btn btn-primary">Use Template</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+      feather.replace();
+
+      function setIntermediateCheckboxes() {
+        const checkbox = document.querySelector('.custom-control-input[indeterminate]');
+        checkbox.indeterminate = true;
+      }
+      function addSvgBackgroundToForm() {
+        const iconPrependList = document.querySelectorAll('.icon-prepend');
+        for (let index = 0; index < iconPrependList.length; index++) {
+          const element = iconPrependList[index];
+          const icon = element.dataset.icon;
+          const svg = feather.icons[icon].toSvg({'stroke-width': 1.5, color: 'rgba(255,255,255,0.7)'})
+          const escapeSvg = svg.replace(/</g, '%3c')
+            .replace(/>/g, "%3e")
+            .replace(/#/g, "%23")
+            .replace(/"/g, "\'")
+            .replace(/\)/g, "%29")
+            .replace(/\(/g, "%28");
+          element.style.backgroundImage = `url("data:image/svg+xml,${escapeSvg}")`;
+        }
+      }
+
+      $(document).ready(() => {
+        $('#modalTrigger').click();
+        addSvgBackgroundToForm();
+        setIntermediateCheckboxes();
+      })
+
+    </script>
+  </body>
+</html>

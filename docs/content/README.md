@@ -1,6 +1,6 @@
 <div class="blankstate mt-6">
   <div class="circle-wrapper mb-4">
-    <img src="../docs/examples/assets/blankstate-img.png" alt="">
+    <img src="./docs/examples/assets/blankstate-img.png" alt="">
   </div>
   <h1 class="h3">Stagecast Styles</h1>
   <h4 class="h4">Welcome to the Stagecast styles version `v0.0.1`</h4>
