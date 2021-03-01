@@ -44,3 +44,21 @@
     }
   }
 }
+
+@media (max-width: 576px) {
+  .modal-dialog {
+    margin: 0;
+    .modal-content {
+      border: none;
+    }
+
+    .modal-header {
+      background-color: $z-space-00;
+      @supports (position: sticky) {
+        position: sticky;
+        top: 0;
+        z-index: $zindex-sticky;
+      }
+    }
+  }
+}
