@@ -9,17 +9,10 @@
   <body>
 
     <style>
-      ul.marketing-ul {
-        list-style: none;
-        padding: 0;
-      }
-      ul.marketing-ul li {
-        height: 28px;
-        background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMTUuOTA1NCIgY3k9IjE1LjkwNTQiIHI9IjE1LjkwNTQiIGZpbGw9IiM2MkNBODEiLz4KPHBhdGggZD0iTTIyLjE5MzYgMTIuNTc2NEwxNC4wNTU5IDIwLjcxNDFMMTAuMzU3IDE3LjAxNTEiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjkiIHN0cm9rZS13aWR0aD0iMS40Nzk1NyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+Cjwvc3ZnPgo=");
-        background-position: 0 0;
-        background-size: 24px;
-        background-repeat: no-repeat;
-        padding-left: 40px;
+
+      .max-w-400 {
+        width: 100%;
+        max-width: 400px;
       }
 
       @media (min-width: 992px) {
@@ -33,42 +26,34 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-12 col-lg-4 vh-lg-100 pb-0 pt-lg-8 px-5 px-lg-8 order-2 order-lg-0" style="background: var(--blue-300);">
-          <div class="d-flex flex-lg-column h-100" style="background: url(../showcase-assets/signup.png); background-repeat: no-repeat; background-size: contain; background-position: bottom right;">
+          <div class="d-flex flex-column h-100 text-center align-items-center">
+            <img class="mb-5 mr-auto" src="../showcase-assets/logo-white.png" width="81" alt="">
             <div>
-              <img class="mb-5" src="../showcase-assets/logo-white.png" width="81" alt="">
-              <h1 class="h2 mb-5">We can even add some text here.</h1>
-              <ul class="marketing-ul">
-                <li class="h4">Customize your activations</li>
-                <li class="h4">Activate your audience</li>
-                <li class="h4">Measure the results</li>
-                <li class="h4">Collect audience data</li>
-              </ul>
+              <h1 class="h1">Stagecast for Enterprise</h1>
+              <h2 class="h4 mb-5">The audience activation tool for larger teams</h2>
+            </div>
+            <img class="my-5 max-w-400" src="../showcase-assets/login.png"alt="">
+            <div class="ml-0">
+              <h3 class="h4">Collect valuable audience data <br> and convert participants into customers</h3>
+              <button class="btn btn-secondary my-5 px-5" type="button">Schedule a Demo</button>
             </div>
           </div>
           </div>
         <div class="col-12 col-lg-8 vh-lg-100 px-5 py-8 py-lg-0 d-flex align-items-lg-center">
           <span class="p-5" style="position: absolute; right: 0; top: 0">
-            Already have an account? <a class="px-4" href="./login.html">Login</a>
+            Don't have an account? <a class="px-4" href="./signup.html">Sign up</a>
           </span>
           <form class="col-md-7 my-lg-auto mx-auto px-0 py-8 py-lg-0" style="max-width: 500px">
-            <h1>Get started absolutely free.</h1>
+            <h1>Log in to your account</h1>
             <div class="form-group mt-5">
               <label for="signupEmail">Email</label>
               <input type="email" class="form-control" id="signupEmail" placeholder="Type email" aria-describedby="emailHelp">
             </div>
             <div class="form-group mt-5">
               <label for="signupPassword">Password</label>
-              <input type="password" class="form-control" placeholder="6+ characters" id="signupPassword">
+              <input type="password" class="form-control" placeholder="Your password" id="signupPassword">
             </div>
-            <div class="form-group mt-5">
-              <label for="signupName">First and Last Name</label>
-              <input type="text" class="form-control" id="signupName" placeholder="Type name" aria-describedby="nameHelp">
-            </div>
-            <div class="custom-control custom-checkbox mt-5">
-              <input type="checkbox" class="custom-control-input" id="signupTerms">
-              <label class="custom-control-label" for="signupTerms">I agree to the <a href="">Stagecast Terms of Use</a>, <a href="">Privacy policy</a> and <a href="">Data processing agreement</a>.</label>
-            </div>
-            <button class="btn btn-primary mt-5" style="width: 200px;" type="submit">Create Account</button>
+            <button class="btn btn-primary mt-5" style="width: 200px;" type="submit">Log In</button>
           </form>
 
         </div>
