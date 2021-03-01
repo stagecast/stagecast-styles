@@ -35,7 +35,7 @@
 @import "bootstrap/scss/alert";
 @import "bootstrap/scss/progress";
 // @import "bootstrap/scss/media";
-// @import "bootstrap/scss/list-group";
+@import "bootstrap/scss/list-group";
 @import "bootstrap-overrides/close";
 // @import "bootstrap/scss/toasts";
 @import "bootstrap/scss/modal"; // Requires transitions
@@ -90,4 +90,8 @@ a {
 
 svg.align-bottom {
   vertical-align: bottom;
+}
+
+.font-weight-semibold {
+  font-weight: $font-weight-semibold;
 }

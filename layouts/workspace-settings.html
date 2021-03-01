@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <title>Stagecast v3</title>
+  </head>
+  <body style="padding: 48px 32px">
+    <div class="row mx-auto">
+      <button id="modalTrigger" type="button" class="btn" data-toggle="modal" data-target="#crewMembersModal">Open the modal!</button>
+
+      <!-- User Modal -->
+      <div>
+        <div class="modal fade" id="crewMembersModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="exampleModalLabel">Account Settings
+                  <div class="dropdown d-inline-block d-md-none text-right ml-3">
+                    <button class="btn btn-sm btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      General
+                      <i class="post-icon align-bottom" data-feather="chevron-down"></i>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <button class="dropdown-item" id="v-pills-general-tab" data-toggle="pill" href="#v-pills-profile">Genral</button>
+                      <button class="dropdown-item" id="v-pills-security-tab" data-toggle="pill" href="#v-pills-security">Payments</button>
+                      <button class="dropdown-item"  id="v-pills-subscriptions-tab" data-toggle="pill" href="#v-pills-settings">Subscriptions</button>
+                    </div>
+                  </div>
+                </h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body p-0">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-3 d-none d-md-block p-5 border-right" style="border-color: var(--z-space-24)">
+                      <div class="nav w-100 flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                        <a class="nav-link active" id="v-pills-general-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">General</a>
+                        <a class="nav-link" id="v-pills-payments-tab" data-toggle="pill" href="#v-pills-security" role="tab" aria-controls="v-pills-security" aria-selected="false">Payments</a>
+                        <a class="nav-link" id="v-pills-subscriptions-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Subscriptions</a>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-9 p-0">
+                      <div class="tab-content" style="min-height: 600px" id="v-pills-tabContent">
+                        <div class="tab-pane fade show active p-5" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-general-tab">
+                          <div>
+                            <div class="border-bottom pb-5" style="border-color: var(--z-space-24)">
+                              <h3 class="h5">Icon
+                                <i class="float-right" data-feather="chevron-down"></i>
+                              </h3>
+                              <div style="color: var(--text-medium-emph)">Add an icon to make it easier to quickly identify your workspace</div>
+                              <div>
+                                <div class="avatar avatar-xl avatar-primary mt-5">M</div>
+                                <button class="btn btn-secondary mt-4 ml-5">
+                                  <i class="pre-icon" data-feather="upload-cloud"></i>
+                                  Upload
+                                </button>
+                              </div>
+                            </div>
+                            <div class="border-bottom py-5" style="border-color: var(--z-space-24)">
+                              <h3 class="h5">Name
+                                <i class="float-right" data-feather="chevron-down"></i>
+                              </h3>
+                              <div style="color: var(--text-medium-emph)">Change the name of your workspace</div>
+                              <div>
+                                <div class="form-group my-5">
+                                  <input type="email" class="form-control" value="My Workspace" placeholder="Type name..." aria-describedby="name">
+                                </div>
+                                <button class="btn btn-primary">
+                                  Save Name
+                                </button>
+                              </div>
+                            </div>
+                            <div class="border-bottom py-5" style="border-color: var(--z-space-24)">
+                              <h3 class="h5">Delete this workspace
+                                <i class="float-right" data-feather="chevron-down"></i>
+                              </h3>
+                              <div style="color: var(--text-medium-emph)">Careful! This can not be undone.</div>
+                              <div>
+                                <button class="btn btn-danger mt-5">
+                                  Delete Workspace
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tab-pane fade p-5" id="v-pills-security" role="tabpanel" aria-labelledby="v-pills-payments-tab">
+                          <div>
+                            <div class="border-bottom pb-5" style="border-color: var(--z-space-24)">
+                              <h3 class="h5">Past invoices
+                              </h3>
+                              <div style="color: var(--text-medium-emph)">Below you find the list of invoices sent to robin@stagecast.se</div>
+                              <div class="row mt-5">
+                                <div class="col-12 d-flex flex-row align-items-center justify-content-between p-5" style="background: var(--z-space-01);">
+                                  <div class="font-weight-semibold">November 17th 2020</div>
+                                  <div>Annual Enterprise (Year, €)</div>
+                                  <div>499 €</div>
+                                  <button class="btn btn-ghost-primary"><i class="pre-icon" data-feather="download"></i>Download as PDF</button>
+                                </div>
+                                <div class="col-12 d-flex flex-row align-items-center justify-content-between mt-2 p-5" style="background: var(--z-space-01);">
+                                  <div class="font-weight-semibold">November 17th 2020</div>
+                                  <div>Annual Enterprise (Year, €)</div>
+                                  <div>499 €</div>
+                                  <button class="btn btn-ghost-primary"><i class="pre-icon" data-feather="download"></i>Download as PDF</button>
+                                </div>
+                                <div class="col-12 d-flex flex-row align-items-center justify-content-between mt-2 p-5" style="background: var(--z-space-01);">
+                                  <div class="font-weight-semibold">November 17th 2020</div>
+                                  <div>Annual Enterprise (Year, €)</div>
+                                  <div>499 €</div>
+                                  <button class="btn btn-ghost-primary"><i class="pre-icon" data-feather="download"></i>Download as PDF</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tab-pane fade p-5" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-subscriptions-tab">
+                          <div>
+                            <div class="border-bottom pb-5" style="border-color: var(--z-space-24)">
+                              <h3 class="h5">Annual Plan</h3>
+                              <div style="color: var(--text-medium-emph)">For any issue contact us at support@stagecast.io</div>
+                              <ul class="list-group list-group-flush mt-5 px-5 py-3 rounded" style="background: var(--z-space-01);">
+                                <li class="list-group-item d-flex justify-content-between">
+                                  <div class="font-weight-semibold">Current Plan</div>
+                                  <div class="">Enterprise</div>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between">
+                                  <div class="font-weight-semibold">Status</div>
+                                  <div class="text-success">Active</div>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between">
+                                  <div class="font-weight-semibold">Billing Period Start</div>
+                                  <div>December 17th 2020, 9:28:07 pm</div>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between">
+                                  <div class="font-weight-semibold">Billing Period End</div>
+                                  <div>December 17th 2021, 9:28:07 pm</div>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="border-bottom pb-5" style="border-color: var(--z-space-24)">
+                              <h3 class="h5 mt-5">Extra Participant credits</h3>
+                              <div style="color: var(--text-medium-emph)">The credits are bound to the workspace</div>
+                              <ul class="list-group list-group-flush mt-5 px-5 py-3 rounded" style="background: var(--z-space-01);">
+                                <li class="list-group-item d-flex justify-content-between">
+                                  <div class="font-weight-semibold">Credits Left</div>
+                                  <div class="text-success">24,796</div>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between">
+                                  <div class="font-weight-semibold">Purchase Date</div>
+                                  <div>December 17th 2020, 9:28:07 pm</div>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+      feather.replace();
+
+      function addSvgBackgroundToForm() {
+        const iconPrependList = document.querySelectorAll('.icon-prepend');
+        for (let index = 0; index < iconPrependList.length; index++) {
+          const element = iconPrependList[index];
+          const icon = element.dataset.icon;
+          const svg = feather.icons[icon].toSvg({'stroke-width': 1.5, color: 'rgba(255,255,255,0.7)'})
+          const escapeSvg = svg.replace(/</g, '%3c')
+            .replace(/>/g, "%3e")
+            .replace(/#/g, "%23")
+            .replace(/"/g, "\'")
+            .replace(/\)/g, "%29")
+            .replace(/\(/g, "%28");
+          element.style.backgroundImage = `url("data:image/svg+xml,${escapeSvg}")`;
+        }
+      }
+
+      $(document).ready(() => {
+        $('#modalTrigger').click();
+        addSvgBackgroundToForm();
+      })
+
+    </script>
+  </body>
+</html>
