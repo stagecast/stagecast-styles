@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <title>Stagecast v3</title>
+  </head>
+  <body>
+
+    <style>
+      ul.marketing-ul {
+        list-style: none;
+        padding: 0;
+      }
+      ul.marketing-ul li {
+        height: 28px;
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMTUuOTA1NCIgY3k9IjE1LjkwNTQiIHI9IjE1LjkwNTQiIGZpbGw9IiM2MkNBODEiLz4KPHBhdGggZD0iTTIyLjE5MzYgMTIuNTc2NEwxNC4wNTU5IDIwLjcxNDFMMTAuMzU3IDE3LjAxNTEiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjkiIHN0cm9rZS13aWR0aD0iMS40Nzk1NyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+Cjwvc3ZnPgo=");
+        background-position: 0 0;
+        background-size: 24px;
+        background-repeat: no-repeat;
+        padding-left: 40px;
+      }
+
+    </style>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 col-lg-4 vh-lg-100 pb-0 pt-lg-8 px-lg-8 " style="background: var(--blue-300);">
+          <div class="d-flex flex-lg-column h-100" style="background: url(../showcase-assets/signup.png); background-repeat: no-repeat; background-size: contain; background-position: bottom right;">
+            <div>
+              <img class="mb-5" src="../showcase-assets/logo-white.png" width="81" alt="">
+              <h1 class="h2 mb-5">We can even add some text here.</h1>
+              <ul class="marketing-ul">
+                <li class="h4">Customize your activations</li>
+                <li class="h4">Activate your audience</li>
+                <li class="h4">Measure the results</li>
+                <li class="h4">Collect audience data</li>
+              </ul>
+            </div>
+          </div>
+          </div>
+        <div class="col-12 col-lg-8 vh-100 p-0 d-flex align-items-center">
+          <span class="p-5" style="position: absolute; right: 0; top: 0">
+            Already have an account? <a class="px-4" href="./login">Login</a>
+          </span>
+          <form class="col-md-7 m-auto p-5" style="max-width: 500px">
+            <h1>Get started absolutely free.</h1>
+            <div class="form-group mt-5">
+              <label for="signupEmail">Email</label>
+              <input type="email" class="form-control" id="signupEmail" placeholder="Type email..." aria-describedby="emailHelp">
+            </div>
+            <div class="form-group mt-5">
+              <label for="signupPassword">Password</label>
+              <input type="password" class="form-control" placeholder="6+ characters" id="signupPassword">
+            </div>
+            <div class="form-group mt-5">
+              <label for="signupName">First and Last Name</label>
+              <input type="text" class="form-control" id="signupName" placeholder="Firstname Lastname" aria-describedby="nameHelp">
+            </div>
+            <div class="custom-control custom-checkbox mt-5">
+              <input type="checkbox" class="custom-control-input" id="signupTerms">
+              <label class="custom-control-label" for="signupTerms">I agree to the <a href="">Stagecast Terms of Use</a>, <a href="">Privacy policy</a> and <a href="">Data processing agreement</a>.</label>
+            </div>
+            <button class="btn btn-primary mt-5 px-6" type="submit">Create Account</button>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+      feather.replace();
+
+      function setIntermediateCheckboxes() {
+        const checkbox = document.querySelector('.custom-control-input[indeterminate]');
+        checkbox.indeterminate = true;
+      }
+      function addSvgBackgroundToForm() {
+        const iconPrependList = document.querySelectorAll('.icon-prepend');
+        for (let index = 0; index < iconPrependList.length; index++) {
+          const element = iconPrependList[index];
+          const icon = element.dataset.icon;
+          const svg = feather.icons[icon].toSvg({'stroke-width': 1.5, color: 'rgba(255,255,255,0.7)'})
+          const escapeSvg = svg.replace(/</g, '%3c')
+            .replace(/>/g, "%3e")
+            .replace(/#/g, "%23")
+            .replace(/"/g, "\'")
+            .replace(/\)/g, "%29")
+            .replace(/\(/g, "%28");
+          element.style.backgroundImage = `url("data:image/svg+xml,${escapeSvg}")`;
+        }
+      }
+
+      $(document).ready(() => {
+        $('#modalTrigger').click();
+        addSvgBackgroundToForm();
+        setIntermediateCheckboxes();
+      })
+
+    </script>
+  </body>
+</html>
