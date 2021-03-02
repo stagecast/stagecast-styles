@@ -20,23 +20,29 @@ new Docute({
   ],
   sidebar: [
     {
-      title: 'Guide',
+      title: 'Support',
+      links: [
+        { title: 'Color system', link: '/colors' },
+        { title: 'Typography', link: '/typography' }
+      ]
+    },
+    {
+      title: 'Components',
       links: [
         { title: 'Alerts', link: '/alerts' },
         { title: 'Avatars', link: '/avatars' },
         { title: 'Badges', link: '/badges' },
         { title: 'Blankstate', link: '/blankstate' },
         { title: 'Buttons', link: '/buttons' },
-        { title: 'Color system', link: '/colors' },
         { title: 'Forms', link: '/forms' },
         { title: 'Dropdowns', link: '/dropdowns' },
         { title: 'Icons', link: '/icons' },
         { title: 'Modals', link: '/modals' },
         { title: 'Navs', link: '/nav' },
-        { title: 'Progress', link: '/progress' },
-        { title: 'Typography', link: '/typography' }
+        { title: 'Progress', link: '/progress' }
       ]
     }
+
   ],
   cssVariables: {
     accentColor: 'var(--primary-light)',
