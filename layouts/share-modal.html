@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <title>Stagecast v3</title>
+  </head>
+  <body style="padding: 48px 32px">
+    <div class="row mx-auto">
+      <button id="modalTrigger" type="button" class="btn" data-toggle="modal" data-target="#templatesModal">Open the modal!</button>
+      <div>
+        <div class="modal fade" id="templatesModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="exampleModalLabel">Share</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="nav with-dynamic-active-indicator nav-fill nav-justified" id="v-pills-tab" role="tablist" aria-orientation="horizontal">
+                        <a class="nav-item text-info nav-link active" id="v-pills-presenter-tab" data-toggle="pill" href="#v-pills-presenter" role="tab" aria-controls="v-pills-presenter" aria-selected="false">Presenter View</a>
+                        <a class="nav-item text-info nav-link" id="v-pills-participant-tab" data-toggle="pill" href="#v-pills-participant" role="tab" aria-controls="v-pills-participant" aria-selected="false">Participant Mode</a>
+                        <hr class="active-indicator" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="tab-content py-6" style="min-height: 260px" id="v-pills-tabContent">
+                        <div class="tab-pane fade show active" id="v-pills-presenter" role="tabpanel" aria-labelledby="v-pills-presenter-tab">
+                          <div class="form-group">
+                            <label for="exampleInputEmail1">Share Results Link</label>
+                            <div class="input-group">
+                              <input type="text" class="form-control" placeholder="https://results.stagecast.se/?event=0E3..." data-icon="download-cloud" readonly>
+                              <div class="input-group-append">
+                                <button class="btn btn-primary">Copy</button>
+                              </div>
+                            </div>
+                            <small id="emailHelp" class="form-text text-muted">Copy the share results link and paste it on your website, OBS, Livestream or simply share it with your colleagues</small>
+                          </div>
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-participant" role="tabpanel" aria-labelledby="v-pills-participant-tab">
+                          <div class="form-group">
+                            <label for="exampleInputEmail1">Invite Participants Link</label>
+                            <div class="input-group">
+                              <input type="text" class="form-control" placeholder="https://join.stagecast.se/?code=2496..." data-icon="download-cloud" readonly>
+                              <div class="input-group-append">
+                                <button class="btn btn-primary">Copy</button>
+                              </div>
+                            </div>
+                            <small id="emailHelp" class="form-text text-muted">Share this link with the audience you would like to participate in your activations of this room.</small>
+                          </div>
+                          <div class="mt-5">
+                            <h4 class="h5">Room Code <i class="ml-2" style="color: var(--text-no-emph)" data-feather="help-circle"></i></h4>
+                            <p>The room code is <span style="color: var(--text-medium-emph)">1234</span></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+      function addSvgBackgroundToForm() {
+        const iconPrependList = document.querySelectorAll('.icon-prepend');
+        for (let index = 0; index < iconPrependList.length; index++) {
+          const element = iconPrependList[index];
+          const icon = element.dataset.icon;
+          const svg = feather.icons[icon].toSvg({'stroke-width': 1.5, color: 'rgba(255,255,255,0.7)'})
+          const escapeSvg = svg.replace(/</g, '%3c')
+            .replace(/>/g, "%3e")
+            .replace(/#/g, "%23")
+            .replace(/"/g, "\'")
+            .replace(/\)/g, "%29")
+            .replace(/\(/g, "%28");
+          element.style.backgroundImage = `url("data:image/svg+xml,${escapeSvg}")`;
+        }
+      }
+
+      function initNav($) {
+        const navDynamic = $('.nav.with-dynamic-active-indicator');
+        navDynamic.map(function (e) {
+          const parentThis = $(this);
+          const indicator = parentThis.children('.active-indicator');
+          const activeEl = parentThis.children('.active');
+          indicator.css({ left: activeEl.css('padding-left'), top: activeEl.outerHeight(), width: activeEl.width(), height: '4px' });
+
+          $(window).resize(function() {
+            const activeItem = $('a.nav-link.active');
+            const leftPosition = activeItem.offset().left - activeItem.parent().offset().left + parseInt(activeItem.css('padding-left'));
+            indicator.css({ left: leftPosition, width: activeItem.width() });
+          });
+
+          parentThis.children('.nav-link').click(function() {
+            // parentThis.children('a.nav-link.active').removeClass("active");
+            // $(this).addClass("active");
+            const leftPosition = $(this).offset().left - $(this).parent().offset().left + parseInt($(this).css('padding-left'));
+            indicator.css({ left: leftPosition, width: $(this).width() });
+          });
+        });
+      }
+
+      $(document).ready(() => {
+        $('#modalTrigger').click();
+        addSvgBackgroundToForm();
+        setTimeout(() => {
+          initNav($)
+          feather.replace();
+        }, 400);
+      })
+
+    </script>
+  </body>
+</html>
