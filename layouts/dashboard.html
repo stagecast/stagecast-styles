@@ -183,10 +183,10 @@
             <!-- Activation + Preview -->
             <div class="d-flex" style="min-height: calc(100% - 64px);">
               <!-- Activation List -->
-              <div style="min-width: 320px; max-width: 380px; border-color: var(--z-space-24); flex-shrink: 0; min-height: 100%;" class="d-flex flex-column border-right p-5">
+              <div style="min-width: 320px; max-width: 468px; border-color: var(--z-space-24); flex-shrink: 0; min-height: 100%;" class="d-flex flex-column border-right p-6">
                 <!-- Activation List header -->
                 <div class="mb-4">
-                  <span class="h6 mb-0" style="color: var(--text-medium-emph)">
+                  <span class="h5 mb-0" style="color: var(--text-medium-emph)">
                     Manage Activations
                   </span>
                   <span class="float-right">
@@ -221,7 +221,7 @@
                 </div>
               </div>
               <!-- Previews -->
-              <div class="px-5 pt-3">
+              <div class="px-6 pt-5 d-none d-lg-block">
                 <div class="nav with-dynamic-active-indicator" id="v-pills-tab" role="tablist" aria-orientation="horizontal">
                   <a class="nav-item text-info nav-link active pl-0" id="v-pills-presenter-tab" data-toggle="pill" href="#v-pills-presenter" role="tab" aria-controls="v-pills-presenter" aria-selected="false">Presenter View</a>
                   <a class="nav-item text-info nav-link" id="v-pills-participant-tab" data-toggle="pill" href="#v-pills-participant" role="tab" aria-controls="v-pills-participant" aria-selected="false">Participant Mode</a>
@@ -300,7 +300,7 @@
           indicator.css({ left: activeEl.css('padding-left'), top: activeEl.outerHeight(), width: activeEl.width(), height: '4px' });
 
           $(window).resize(function() {
-            const activeItem = $('a.nav-link.active');
+            const activeItem = $('.nav.with-dynamic-active-indicator a.nav-link.active');
             const leftPosition = activeItem.offset().left - activeItem.parent().offset().left + parseInt(activeItem.css('padding-left'));
             indicator.css({ left: leftPosition, width: activeItem.width() });
           });
