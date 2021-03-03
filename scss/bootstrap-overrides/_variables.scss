@@ -444,7 +444,7 @@ $blockquote-small-color:      $gray-600 !default;
 $blockquote-small-font-size:  $small-font-size !default;
 $blockquote-font-size:        $font-size-base * 1.25 !default;
 
-$hr-border-color:             rgba($black, .1) !default;
+$hr-border-color:             $z-space-24 !default;
 $hr-border-width:             $border-width !default;
 
 $mark-padding:                .2em !default;
@@ -511,7 +511,7 @@ $input-btn-focus-width:       .2rem !default;
 $input-btn-focus-color:       $component-active-bg !default;
 $input-btn-focus-box-shadow:  0 0 0 $input-btn-focus-width $input-btn-focus-color !default;
 
-$input-btn-padding-y-sm:      map-get($spacers, 1) !default;
+$input-btn-padding-y-sm:      map-get($spacers, 1) / 2 !default;
 $input-btn-padding-x-sm:      map-get($spacers, 2) !default;
 $input-btn-font-size-sm:      $font-size-sm !default;
 $input-btn-line-height-sm:    18px !default;

@@ -49,7 +49,7 @@
           <hr class="active-indicator" />
         </nav>
       </div>
-      <!-- Main Content -->
+      <!-- Page Main Content -->
       <div class="w-100">
         <!-- Workspace Navbar -->
         <div class="bg-01 d-flex justify-content-between" style="height: 60px;">
@@ -99,65 +99,167 @@
             </a>
           </div>
         </div>
-        <!-- Room List Sidenav -->
-        <div class="bg-01 d-flex flex-column" style="width: 168px; min-height: calc(100vh - 60px)">
-          <div class="p-4">
-            <h4 class="h6 mb-0" style="color: var(--text-medium-emph)">
-              Activation Rooms
-              <a class="float-right text-info" href="../docs/examples/modals-activation.html">
-                <i data-feather="plus"></i>
+        <!-- Dashboard Main -->
+        <div class="d-flex flex-row">
+          <!-- Room List Sidenav -->
+          <div class="bg-01 d-flex flex-column" style="width: 168px; min-height: calc(100vh - 60px); flex-shrink: 0;">
+            <div class="p-4">
+              <h4 class="h6 mb-0" style="color: var(--text-medium-emph)">
+                Activation Rooms
+                <a class="float-right text-info" href="../docs/examples/modals-activation.html">
+                  <i data-feather="plus"></i>
+                </a>
+              </h4>
+            </div>
+            <nav class="nav flex-column w-100 px-4" style="border-color: var(--z-space-24);">
+              <!-- Room 1 -->
+              <div class="nav-item btn btn-primary text-left my-2">
+                <span>Room 1</span>
+                <div class="dropdown d-inline-block float-right mr-n1">
+                  <a style="color: inherit;" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i data-feather="more-vertical"></i>
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item " href="./room-settings.html"><i class="pre-icon mr-3" data-feather="edit-3"></i>Edit</a>
+                    <button class="dropdown-item" href="#"><i class="pre-icon mr-3" data-feather="copy"></i>Duplicate</button>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item text-danger" href="../docs/examples/modals-dialog-advance.html"><i class="pre-icon mr-3" data-feather="trash-2"></i>Delete</a>
+                  </div>
+                </div>
+              </div>
+              <!-- Room 2 -->
+              <div class="nav-item btn btn-secondary text-left my-2">
+                <span>Room 2</span>
+                <div class="dropdown d-inline-block float-right mr-n1">
+                  <a style="color: inherit;" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i data-feather="more-vertical"></i>
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="./room-settings.html"><i class="pre-icon mr-3" data-feather="edit-3"></i>Edit</a>
+                    <button class="dropdown-item" href="#"><i class="pre-icon mr-3" data-feather="copy"></i>Duplicate</button>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item text-danger" href="../docs/examples/modals-dialog-advance.html"><i class="pre-icon mr-3" data-feather="trash-2"></i>Delete</a>
+                  </div>
+                </div>
+              </div>
+              <!-- Room 3 -->
+              <div class="nav-item btn btn-secondary text-left my-2">
+                <span>Room 2</span>
+                <div class="dropdown d-inline-block float-right mr-n1">
+                  <a style="color: inherit;" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i data-feather="more-vertical"></i>
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="./room-settings.html"><i class="pre-icon mr-3" data-feather="edit-3"></i>Edit</a>
+                    <button class="dropdown-item" href="#"><i class="pre-icon mr-3" data-feather="copy"></i>Duplicate</button>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item text-danger" href="../docs/examples/modals-dialog-advance.html"><i class="pre-icon mr-3" data-feather="trash-2"></i>Delete</a>
+                  </div>
+                </div>
+              </div>
+            </nav>
+            <nav class="nav flex-column w-100 px-1 py-2 mt-auto border-top" style="border-color: var(--z-space-24);">
+              <a class="nav-link active" href="#">
+                <i class="pre-icon mr-2" data-feather="gift"></i>What's new?
+                </a>
+              <a class="nav-link" href="#">
+                <i class="pre-icon mr-2" data-feather="book-open"></i>Retake tour
               </a>
-            </h4>
+              <a class="nav-link" href="#">
+                <i class="pre-icon mr-2" data-feather="help-circle"></i>Help Center
+                <i class="float-right" style="color: var(--text-no-emph)" data-feather="external-link"></i>            </a>
+            </nav>
           </div>
-          <nav class="nav flex-column w-100 px-4" style="border-color: var(--z-space-24);">
-            <!-- Room 1 -->
-            <div class="nav-item btn btn-primary text-left my-2">Room 1
-              <div class="dropdown d-inline-block float-right">
-                <i class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-feather="more-vertical"></i>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="./room-settings.html"><i class="pre-icon mr-3" data-feather="edit-3"></i>Edit</a>
-                  <button class="dropdown-item" href="#"><i class="pre-icon mr-3" data-feather="copy"></i>Duplicate</button>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item text-danger" href="../docs/examples/modals-dialog-advance.html"><i class="pre-icon mr-3" data-feather="trash-2"></i>Delete</a>
+          <!-- Room Details -->
+          <div class="flex-grow-1">
+            <!-- Room Header -->
+            <div class="d-flex align-items-center py-3 px-5">
+              <h1 class="h2 mb-0">Room 1</h1>
+              <button class="btn btn-secondary ml-auto">
+                <i class="pre-icon" data-feather="bar-chart-2"></i>Room Analytics
+              </button>
+            </div>
+            <hr class="my-0"/>
+            <!-- Activation + Preview -->
+            <div class="d-flex" style="min-height: calc(100% - 64px);">
+              <!-- Activation List -->
+              <div style="min-width: 320px; max-width: 380px; border-color: var(--z-space-24); flex-shrink: 0; min-height: 100%;" class="d-flex flex-column border-right p-5">
+                <!-- Activation List header -->
+                <div class="mb-4">
+                  <span class="h6 mb-0" style="color: var(--text-medium-emph)">
+                    Manage Activations
+                  </span>
+                  <span class="float-right">
+                    <button type="button" class="btn btn-sm btn-secondary">
+                      <i class="pre-icon" data-feather="search"></i>Templates
+                    </button>
+                    <button type="button" class="btn btn-sm btn-primary ml-2">Create</button>
+                  </span>
+                </div>
+                <!-- Placeholder content -->
+                <div class="blankstate">
+                  <h1 class="h4">Create your activations</h1>
+                  <p style="color: var(--text-no-emph)">Engage your audience with quizzes, votings,
+                    photo collages and so much more</p>
+                    <div class="d-flex" style="width: calc(100% + 48px); margin: 0px -24px;">
+                      <div class="m-2">
+                        <img class="rounded" style="width: 100%; height: auto;" src="../showcase-assets/classic-quiz-template.jpg" alt="">
+                        <div>Classic Quiz</div>
+                      </div>
+                      <div class="m-2">
+                        <img class="rounded" style="width: 100%; height: auto;" src="../showcase-assets/photo-collage-template.png" alt="">
+                        <div>Photo Collage</div>
+                      </div>
+                      <div class="m-2">
+                        <img class="rounded" style="width: 100%; height: auto;" src="../showcase-assets/spinning-wheel-template.png" alt="">
+                        <div>Spinning Wheel</div>
+                      </div>
+                    </div>
+                    <button class="btn btn-secondary">
+                      <i class="pre-icon" data-feather="search"></i>Templates
+                    </button>
+                </div>
+              </div>
+              <!-- Previews -->
+              <div class="px-5 pt-3">
+                <div class="nav with-dynamic-active-indicator" id="v-pills-tab" role="tablist" aria-orientation="horizontal">
+                  <a class="nav-item text-info nav-link active pl-0" id="v-pills-presenter-tab" data-toggle="pill" href="#v-pills-presenter" role="tab" aria-controls="v-pills-presenter" aria-selected="false">Presenter View</a>
+                  <a class="nav-item text-info nav-link" id="v-pills-participant-tab" data-toggle="pill" href="#v-pills-participant" role="tab" aria-controls="v-pills-participant" aria-selected="false">Participant Mode</a>
+                  <hr class="active-indicator" />
+                </div>
+                <div class="mt-4">
+                  <div class="tab-content"id="v-pills-tabContent">
+                    <!-- Tab Content 1 -->
+                    <div class="tab-pane fade show active" id="v-pills-presenter" role="tabpanel" aria-labelledby="v-pills-presenter-tab">
+                      <div class="blankstate m-auto align-self-center bg-01">
+                        <div class="circle-wrapper mb-4">
+                          <img src="../docs/examples/assets/blankstate-img.png" alt="">
+                        </div>
+                        <h1 class="h3">Run your activations</h1>
+                        <p style="color: var(--text-no-emph)">Start an activation and your audience can participate at www.stagecast.io using the room code #1234.</p>
+                        <button class="btn btn-primary">Watch Tutorial</button>
+                      </div>
+                    </div>
+                    <!-- Tab Content 2 -->
+                    <div class="tab-pane fade" id="v-pills-participant" role="tabpanel" aria-labelledby="v-pills-participant-tab">
+                      <img class="w-100" src="../showcase-assets/dashboard-preview.png" alt="">
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-4 text-right">
+                  <button class="btn btn-sm btn-ghost-success">
+                    <i class="pre-icon" data-feather="eye"></i>0
+                  </button>
+                  <button class="btn btn-sm btn-secondary ml-3">
+                    <i class="pre-icon" data-feather="share-2"></i>Share
+                  </button>
+                  <button class="btn btn-sm btn-secondary ml-3">
+                    <i data-feather="settings"></i>
+                  </button>
                 </div>
               </div>
             </div>
-            <!-- Room 2 -->
-            <div class="nav-item btn btn-secondary text-left my-2">Room 2
-              <div class="dropdown d-inline-block float-right">
-                <i class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-feather="more-vertical"></i>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <button class="dropdown-item" href="#"><i class="pre-icon mr-3" data-feather="edit-3"></i>Edit</button>
-                  <button class="dropdown-item" href="#"><i class="pre-icon mr-3" data-feather="copy"></i>Duplicate</button>
-                  <div class="dropdown-divider"></div>
-                  <button class="dropdown-item text-danger" href="../docs/examples/modals-dialog-advance.html"><i class="pre-icon mr-3" data-feather="trash-2"></i>Delete</button>
-                </div>
-              </div>
-            </div>
-            <!-- Room 3 -->
-            <div class="nav-item btn btn-secondary text-left my-2">Room 3
-              <div class="dropdown d-inline-block float-right">
-                <i class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-feather="more-vertical"></i>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <button class="dropdown-item" href="#"><i class="pre-icon mr-3" data-feather="edit-3"></i>Edit</button>
-                  <button class="dropdown-item" href="#"><i class="pre-icon mr-3" data-feather="copy"></i>Duplicate</button>
-                  <div class="dropdown-divider"></div>
-                  <button class="dropdown-item text-danger" href="../docs/examples/modals-dialog-advance.html"><i class="pre-icon mr-3" data-feather="trash-2"></i>Delete</button>
-                </div>
-              </div>
-            </div>
-          </nav>
-          <nav class="nav flex-column w-100 px-1 py-2 mt-auto border-top" style="border-color: var(--z-space-24);">
-            <a class="nav-link active" href="#">
-              <i class="pre-icon mr-2" data-feather="gift"></i>What's new?
-              </a>
-            <a class="nav-link" href="#">
-              <i class="pre-icon mr-2" data-feather="book-open"></i>Retake tour
-            </a>
-            <a class="nav-link" href="#">
-              <i class="pre-icon mr-2" data-feather="help-circle"></i>Help Center
-              <i class="float-right" style="color: var(--text-no-emph)" data-feather="external-link"></i>            </a>
-          </nav>
+          </div>
         </div>
       </div>
     </div>
@@ -189,14 +291,39 @@
         }
       }
 
-      $(document).ready(() => {
-        $('#modalTrigger').click();
-        addSvgBackgroundToForm();
+      function initNav($) {
+        const navDynamic = $('.nav.with-dynamic-active-indicator');
+        navDynamic.map(function (e) {
+          const parentThis = $(this);
+          const indicator = parentThis.children('.active-indicator');
+          const activeEl = parentThis.children('.active');
+          indicator.css({ left: activeEl.css('padding-left'), top: activeEl.outerHeight(), width: activeEl.width(), height: '4px' });
 
-        $('.nav .nav-link').click(function() {
-          $('a.nav-link.active').removeClass("active");
+          $(window).resize(function() {
+            const activeItem = $('a.nav-link.active');
+            const leftPosition = activeItem.offset().left - activeItem.parent().offset().left + parseInt(activeItem.css('padding-left'));
+            indicator.css({ left: leftPosition, width: activeItem.width() });
+          });
+
+          parentThis.children('.nav-link').click(function() {
+            // parentThis.children('a.nav-link.active').removeClass("active");
+            // $(this).addClass("active");
+            const leftPosition = $(this).offset().left - $(this).parent().offset().left + parseInt($(this).css('padding-left'));
+            indicator.css({ left: leftPosition, width: $(this).width() });
+          });
+        });
+      }
+
+      $(document).ready(() => {
+        // $('#modalTrigger').click();
+        // addSvgBackgroundToForm();
+
+        $('.workspace-sidenav .nav .nav-link').click(function() {
+          $('.workspace-sidenav a.nav-link.active').removeClass("active");
           $(this).addClass("active");
         });
+
+        initNav($);
       })
 
     </script>
