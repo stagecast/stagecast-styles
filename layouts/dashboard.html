@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <title>Stagecast v3</title>
+  </head>
+  <body>
+
+    <style>
+
+      .max-w-400 {
+        width: 100%;
+        max-width: 400px;
+      }
+
+      @media (min-width: 992px) {
+        .minh-lg-100 {
+          min-height: 100vh;
+        }
+      }
+
+      .workspace-sidenav {
+        height: 100vh;
+      }
+    </style>
+    <div class="d-flex">
+      <!-- Workspace Sidenav -->
+      <div class="workspace-sidenav px-1">
+        <nav class="nav flex-column with-active-vertical-indicator">
+          <a class="nav-item nav-link active">
+            <div class="avatar avatar-primary">M</div>
+          </a>
+          <a class="nav-item nav-link">
+            <div class="avatar avatar-primary">W</div>
+          </a>
+          <a class="nav-item nav-link">
+            <div class="avatar avatar-primary">J</div>
+          </a>
+          <a class="nav-item nav-link">
+            <div class="avatar avatar-primary">S</div>
+          </a>
+          <a class="nav-item nav-link">
+            <button class="btn avatar">
+              <i data-feather="plus"></i>
+            </button>
+          </a>
+          <hr class="active-indicator" />
+        </nav>
+      </div>
+      <!-- Main Content -->
+      <div class="w-100">
+        <!-- Workspace Navbar -->
+        <div class="bg-01 d-flex justify-content-between" style="height: 60px;">
+          <!-- Workspace Options -->
+          <div class="px-4 py-3" style="width: 168px">
+            <div>
+              <span class="font-weight-semibold">
+                My Workspace
+              </span>
+              <div class="dropdown d-inline-block float-right">
+                <i class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-feather="chevron-down"></i>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="./user-modal.html">
+                    <div class="avatar avatar-sm avatar-primary mr-3" style="vertical-align: text-bottom;">F</div>Account Settings</a>
+                  <a class="dropdown-item" href="./add-crew-members.html"><i class="pre-icon mr-3" data-feather="users"></i>Workspace Members</a>
+                  <a class="dropdown-item" href="./workspace-settings.html"><i class="pre-icon mr-3" data-feather="settings"></i>Workspace Settings</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item text-danger" href="./login.html"><i class="pre-icon mr-3" data-feather="log-out"></i>Log out</a>
+                </div>
+              </div>
+            </div>
+            <span class="small" style="color: var(--text-medium-emph)">Fabian</span>
+          </div>
+          <!-- Workspace Plan Details -->
+          <div class="d-flex align-items-center">
+            <span style="color: var(--text-medium-emph)">Current Plan:</span>
+            <span class="m-3 font-weight-semibold">Free</span>
+            <button class="btn btn-ghost-primary">Upgrade</button>
+          </div>
+          <!-- Workspace Credits -->
+          <div class="d-flex align-items-center">
+            <span style="color: var(--text-medium-emph)">Available Participants:</span>
+            <div class="d-flex rounded bg-03 py-2 px-3 m-3 align-items-center">
+              <span class="font-weight-semibold">200</span>
+              <div class="progress mx-2" style="width: 68px">
+                <div class="progress-bar bg-success" style="width: 75%"></div>
+              </div>
+              <i data-feather="help-circle"></i>
+            </div>
+            <button class="btn btn-ghost-primary">Buy Credits</button>
+          </div>
+          <!-- Workspace Members -->
+          <div class="align-self-center pr-4">
+            <a class="btn btn-ghost-primary" href="./add-crew-members.html">
+              <i class="pre-icon" data-feather="users"></i>
+              Add Members
+            </a>
+          </div>
+        </div>
+        <!-- Room List Sidenav -->
+        <div class="bg-01 d-flex flex-column" style="width: 168px; min-height: calc(100vh - 60px)">
+          <div class="p-4">
+            <h4 class="h6 mb-0" style="color: var(--text-medium-emph)">
+              Activation Rooms
+              <a class="float-right text-info" href="../docs/examples/modals-activation.html">
+                <i data-feather="plus"></i>
+              </a>
+            </h4>
+          </div>
+          <nav class="nav flex-column w-100 px-4" style="border-color: var(--z-space-24);">
+            <!-- Room 1 -->
+            <div class="nav-item btn btn-primary text-left my-2">Room 1
+              <div class="dropdown d-inline-block float-right">
+                <i class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-feather="more-vertical"></i>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="./room-settings.html"><i class="pre-icon mr-3" data-feather="edit-3"></i>Edit</a>
+                  <button class="dropdown-item" href="#"><i class="pre-icon mr-3" data-feather="copy"></i>Duplicate</button>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item text-danger" href="../docs/examples/modals-dialog-advance.html"><i class="pre-icon mr-3" data-feather="trash-2"></i>Delete</a>
+                </div>
+              </div>
+            </div>
+            <!-- Room 2 -->
+            <div class="nav-item btn btn-secondary text-left my-2">Room 2
+              <div class="dropdown d-inline-block float-right">
+                <i class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-feather="more-vertical"></i>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <button class="dropdown-item" href="#"><i class="pre-icon mr-3" data-feather="edit-3"></i>Edit</button>
+                  <button class="dropdown-item" href="#"><i class="pre-icon mr-3" data-feather="copy"></i>Duplicate</button>
+                  <div class="dropdown-divider"></div>
+                  <button class="dropdown-item text-danger" href="../docs/examples/modals-dialog-advance.html"><i class="pre-icon mr-3" data-feather="trash-2"></i>Delete</button>
+                </div>
+              </div>
+            </div>
+            <!-- Room 3 -->
+            <div class="nav-item btn btn-secondary text-left my-2">Room 3
+              <div class="dropdown d-inline-block float-right">
+                <i class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-feather="more-vertical"></i>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <button class="dropdown-item" href="#"><i class="pre-icon mr-3" data-feather="edit-3"></i>Edit</button>
+                  <button class="dropdown-item" href="#"><i class="pre-icon mr-3" data-feather="copy"></i>Duplicate</button>
+                  <div class="dropdown-divider"></div>
+                  <button class="dropdown-item text-danger" href="../docs/examples/modals-dialog-advance.html"><i class="pre-icon mr-3" data-feather="trash-2"></i>Delete</button>
+                </div>
+              </div>
+            </div>
+          </nav>
+          <nav class="nav flex-column w-100 px-1 py-2 mt-auto border-top" style="border-color: var(--z-space-24);">
+            <a class="nav-link active" href="#">
+              <i class="pre-icon mr-2" data-feather="gift"></i>What's new?
+              </a>
+            <a class="nav-link" href="#">
+              <i class="pre-icon mr-2" data-feather="book-open"></i>Retake tour
+            </a>
+            <a class="nav-link" href="#">
+              <i class="pre-icon mr-2" data-feather="help-circle"></i>Help Center
+              <i class="float-right" style="color: var(--text-no-emph)" data-feather="external-link"></i>            </a>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+      feather.replace();
+
+      function setIntermediateCheckboxes() {
+        const checkbox = document.querySelector('.custom-control-input[indeterminate]');
+        checkbox.indeterminate = true;
+      }
+      function addSvgBackgroundToForm() {
+        const iconPrependList = document.querySelectorAll('.icon-prepend');
+        for (let index = 0; index < iconPrependList.length; index++) {
+          const element = iconPrependList[index];
+          const icon = element.dataset.icon;
+          const svg = feather.icons[icon].toSvg({'stroke-width': 1.5, color: 'rgba(255,255,255,0.7)'})
+          const escapeSvg = svg.replace(/</g, '%3c')
+            .replace(/>/g, "%3e")
+            .replace(/#/g, "%23")
+            .replace(/"/g, "\'")
+            .replace(/\)/g, "%29")
+            .replace(/\(/g, "%28");
+          element.style.backgroundImage = `url("data:image/svg+xml,${escapeSvg}")`;
+        }
+      }
+
+      $(document).ready(() => {
+        $('#modalTrigger').click();
+        addSvgBackgroundToForm();
+
+        $('.nav .nav-link').click(function() {
+          $('a.nav-link.active').removeClass("active");
+          $(this).addClass("active");
+        });
+      })
+
+    </script>
+  </body>
+</html>
