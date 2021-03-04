@@ -9,45 +9,41 @@
   <body>
 
     <style>
-
-      .max-w-400 {
-        width: 100%;
-        max-width: 400px;
-      }
-
-      @media (min-width: 992px) {
-        .minh-lg-100 {
-          min-height: 100vh;
-        }
-      }
-
       .workspace-sidenav {
+        position: sticky;
+        top: 0;
         height: 100vh;
+        min-height: 400px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        flex-shrink: 0;
       }
+
     </style>
     <div class="d-flex">
       <!-- Workspace Sidenav -->
       <div class="workspace-sidenav px-1">
-        <nav class="nav flex-column with-active-vertical-indicator">
-          <a class="nav-item nav-link active">
-            <div class="avatar avatar-primary">M</div>
-          </a>
-          <a class="nav-item nav-link">
-            <div class="avatar avatar-primary">W</div>
-          </a>
-          <a class="nav-item nav-link">
-            <div class="avatar avatar-primary">J</div>
-          </a>
-          <a class="nav-item nav-link">
-            <div class="avatar avatar-primary">S</div>
-          </a>
-          <a class="nav-item nav-link">
-            <button class="btn avatar">
-              <i data-feather="plus"></i>
-            </button>
-          </a>
-          <hr class="active-indicator" />
-        </nav>
+        <div>
+          <nav class="nav flex-column with-active-vertical-indicator">
+            <a class="nav-item nav-link active">
+              <div class="avatar avatar-primary" data-toggle="tooltip" data-placement="right" data-html="true" title="<div class='font-weight-semibold py-1'>My Workspace <code class='ml-3 px-1 rounded bg-01'>&#8984;</code><code class='bg-01 ml-1 rounded px-1'>1</code> </div>">M</div>
+            </a>
+            <a class="nav-item nav-link">
+              <div class="avatar avatar-primary">W</div>
+            </a>
+            <a class="nav-item nav-link">
+              <div class="avatar avatar-primary">J</div>
+            </a>
+            <a class="nav-item nav-link">
+              <div class="avatar avatar-primary">S</div>
+            </a>
+            <a class="nav-item nav-link"><button class="btn avatar"><i data-feather="plus"></i></button></a>
+            <!-- Test content -->
+            <a style="height: 750px; background: yellow">T</a>
+            <hr class="active-indicator" />
+          </nav>
+        </div>
+
       </div>
       <!-- Page Main Content -->
       <div class="w-100">
@@ -82,10 +78,10 @@
           <!-- Workspace Credits -->
           <div class="d-flex align-items-center">
             <span style="color: var(--text-medium-emph)">Available Participants:</span>
-            <div class="d-flex rounded bg-03 py-2 px-3 m-3 align-items-center">
+            <div class="rounded bg-03 py-2 px-3 m-3">
               <span class="font-weight-semibold">200</span>
-              <div class="progress mx-2" style="width: 68px">
-                <div class="progress-bar bg-success" style="width: 75%"></div>
+              <div class="d-inline-block progress mx-2" style="width: 68px">
+                <div class="progress-bar bg-success" style="width: 75%; height: 100%"></div>
               </div>
               <i data-feather="help-circle"></i>
             </div>
@@ -102,8 +98,9 @@
         <!-- Dashboard Main -->
         <div class="d-flex flex-row">
           <!-- Room List Sidenav -->
-          <div class="bg-01 d-flex flex-column" style="width: 168px; min-height: calc(100vh - 60px); flex-shrink: 0;">
-            <div class="p-4">
+          <div class="bg-01 d-flex flex-column" style="width: 168px; height: calc(100vh - 60px); overflow-y: auto; flex-shrink: 0;">
+            <!-- List Header -->
+            <div class="p-4 bg-01" style="position: sticky; top: 0;z-index: 1;">
               <h4 class="h6 mb-0" style="color: var(--text-medium-emph)">
                 Activation Rooms
                 <a class="float-right text-info" href="../docs/examples/modals-activation.html">
@@ -111,6 +108,7 @@
                 </a>
               </h4>
             </div>
+            <!-- Room List -->
             <nav class="nav flex-column w-100 px-4" style="border-color: var(--z-space-24);">
               <!-- Room 1 -->
               <div class="nav-item btn btn-primary text-left my-2">
@@ -157,8 +155,11 @@
                   </div>
                 </div>
               </div>
+              <!-- Test Content -->
+              <div class="nav-item btn btn-secondary text-left my-2"style="height: 750px; background: yellow">T</div>
             </nav>
-            <nav class="nav flex-column w-100 px-1 py-2 mt-auto border-top" style="border-color: var(--z-space-24);">
+            <!-- Bottom Links  -->
+            <nav class="nav flex-column bg-01 w-100 px-1 py-2 mt-auto border-top" style="border-color: var(--z-space-24);position: sticky; bottom: 0;">
               <a class="nav-link active" href="#">
                 <i class="pre-icon mr-2" data-feather="gift"></i>What's new?
                 </a>
@@ -181,9 +182,9 @@
             </div>
             <hr class="my-0"/>
             <!-- Activation + Preview -->
-            <div class="d-flex" style="min-height: calc(100% - 64px);">
+            <div class="d-flex" style="min-height: calc(100% - 71px);">
               <!-- Activation List -->
-              <div style="min-width: 320px; max-width: 468px; border-color: var(--z-space-24); flex-shrink: 0; min-height: 100%;" class="d-flex flex-column border-right p-6">
+              <div style="min-width: 320px; max-width: 468px; border-color: var(--z-space-24); flex-shrink: 0; height: calc(100vh - 131px); overflow-y: auto" class="d-flex flex-column border-right p-6">
                 <!-- Activation List header -->
                 <div class="mb-4">
                   <span class="h5 mb-0" style="color: var(--text-medium-emph)">
@@ -196,32 +197,186 @@
                     <button type="button" class="btn btn-sm btn-primary ml-2">Create</button>
                   </span>
                 </div>
+                <!-- Activations -->
+                <style>
+                  .activation-card .collapsible-menu {
+                    display: none;
+                  }
+                  .activation-card.open .collapsible-menu {
+                    display: block;
+                  }
+                </style>
+                <!-- Activation 1 -->
+                <div class="activation-card rounded bg-01">
+                  <!-- Activation Header -->
+                  <div class="pr-4">
+                    <img width="104" src="../showcase-assets/templates/classic-quiz.png" alt="">
+                    <span class="ml-3 font-weight-semibold">
+                      <i class="mr-2 activation-trigger" data-feather="chevron-down"></i>Classic Quiz
+                    </span>
+                    <div class="float-right align-items-center d-flex py-4">
+                      <div class="bg-primary rounded-circle mr-4" style="width: 32px; height:32px; padding: 4px 8px">
+                        <i style="fill: white" data-feather="play"></i>
+                      </div>
+                      <div class="dropdown">
+                        <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i data-feather="more-vertical"></i>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <button class="dropdown-item active" href="#"><i class="pre-icon mr-3" data-feather="copy"></i>Duplicate</button>
+                          <button class="dropdown-item" href="#"><i class="pre-icon mr-3" data-feather="edit-3"></i>Edit</button>
+                          <button class="dropdown-item" href="#"><i class="pre-icon mr-3" data-feather="tag"></i>Action long title</button>
+                          <div class="dropdown-divider"></div>
+                          <button class="dropdown-item text-danger" href="#"><i class="pre-icon mr-3" data-feather="trash-2"></i>Delete item</button>
+                          <button class="dropdown-item disabled" href="#"><i class="pre-icon mr-3" data-feather="edit-3"></i>Disabled</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="p-3 border-top collapsible-menu" style="border-color: var(--z-space-24);">
+                    <div>
+                      <span>Prizes</span>
+                      <span class="float-right">
+                        <a href="">Results</a>
+                        <a class="ml-3" href="">Add</a>
+                      </span>
+                    </div>
+                    <div class="mt-3">
+                      <span>Call to Actions</span>
+                      <span class="float-right">
+                        <a href="">Results</a>
+                        <a class="ml-3" href="">Add</a>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <!-- Activation 2 -->
+                <div class="activation-card rounded bg-01 mt-3">
+                  <!-- Activation Header -->
+                  <div class="pr-4">
+                    <img width="104" src="../showcase-assets/templates/classic-quiz.png" alt="">
+                    <span class="ml-3 font-weight-semibold">
+                      <i class="mr-2 activation-trigger" data-feather="chevron-down"></i>Classic Quiz
+                    </span>
+                    <div class="float-right align-items-center d-flex py-4">
+                      <div class="bg-danger rounded-circle mr-4" style="width: 32px; height:32px; padding: 4px 8px">
+                        <i style="fill: white" data-feather="square"></i>
+                      </div>
+                      <div class="dropdown">
+                        <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i data-feather="more-vertical"></i>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <button class="dropdown-item active" href="#"><i class="pre-icon mr-3" data-feather="copy"></i>Duplicate</button>
+                          <button class="dropdown-item" href="#"><i class="pre-icon mr-3" data-feather="edit-3"></i>Edit</button>
+                          <button class="dropdown-item" href="#"><i class="pre-icon mr-3" data-feather="tag"></i>Action long title</button>
+                          <div class="dropdown-divider"></div>
+                          <button class="dropdown-item text-danger" href="#"><i class="pre-icon mr-3" data-feather="trash-2"></i>Delete item</button>
+                          <button class="dropdown-item disabled" href="#"><i class="pre-icon mr-3" data-feather="edit-3"></i>Disabled</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="p-3 border-top collapsible-menu" style="border-color: var(--z-space-24);">
+                    <div>
+                      <span>Prizes</span>
+                      <span class="float-right">
+                        <a href="">Results</a>
+                        <a class="ml-3" href="">Add</a>
+                      </span>
+                    </div>
+                    <div class="mt-3">
+                      <span>Call to Actions</span>
+                      <span class="float-right">
+                        <a href="">Results</a>
+                        <a class="ml-3" href="">Add</a>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <!-- Activation 3 -->
+                <div class="activation-card rounded bg-01 mt-3">
+                  <!-- Activation Header -->
+                  <div class="pr-4">
+                    <img width="104" src="../showcase-assets/templates/classic-quiz.png" alt="">
+                    <span class="ml-3 font-weight-semibold">
+                      <i class="mr-2 activation-trigger" data-feather="chevron-down"></i>Classic Quiz
+                    </span>
+                    <div class="float-right align-items-center d-flex py-4">
+                      <div class="bg-primary rounded-circle mr-4" style="width: 32px; height:32px; padding: 4px 8px">
+                        <i style="fill: white" data-feather="play"></i>
+                      </div>
+                      <div class="dropdown">
+                        <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i data-feather="more-vertical"></i>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <button class="dropdown-item active" href="#"><i class="pre-icon mr-3" data-feather="copy"></i>Duplicate</button>
+                          <button class="dropdown-item" href="#"><i class="pre-icon mr-3" data-feather="edit-3"></i>Edit</button>
+                          <button class="dropdown-item" href="#"><i class="pre-icon mr-3" data-feather="tag"></i>Action long title</button>
+                          <div class="dropdown-divider"></div>
+                          <button class="dropdown-item text-danger" href="#"><i class="pre-icon mr-3" data-feather="trash-2"></i>Delete item</button>
+                          <button class="dropdown-item disabled" href="#"><i class="pre-icon mr-3" data-feather="edit-3"></i>Disabled</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="p-3 border-top collapsible-menu" style="border-color: var(--z-space-24);">
+                    <div>
+                      <span>Prizes</span>
+                      <span class="float-right">
+                        <a href="">Results</a>
+                        <a class="ml-3" href="">Add</a>
+                      </span>
+                    </div>
+                    <div class="mt-3">
+                      <span>Call to Actions</span>
+                      <span class="float-right">
+                        <a href="">Results</a>
+                        <a class="ml-3" href="">Add</a>
+                      </span>
+                    </div>
+                  </div>
+                </div>
                 <!-- Placeholder content -->
                 <div class="blankstate border-0">
                   <h1 class="h4">Create your activations</h1>
                   <p style="color: var(--text-no-emph)">Engage your audience with quizzes, votings,
                     photo collages and so much more</p>
-                    <div class="d-flex" style="width: calc(100% + 80px); margin: 0px -40px;">
-                      <div class="m-2">
-                        <img class="rounded" style="width: 100%; height: auto;" src="../showcase-assets/classic-quiz-template.jpg" alt="">
-                        <div>Classic Quiz</div>
+                    <div class="d-flex flex-wrap" style="width: calc(100% + 80px); margin: 0px -40px;">
+                      <div class="m-2" style="flex-basis: 29.5%;">
+                        <img class="rounded" style="width: 100%; height: auto;" src="../showcase-assets/templates/classic-quiz.png" alt="">
+                        <div class="mt-1">Classic Quiz</div>
                       </div>
-                      <div class="m-2">
-                        <img class="rounded" style="width: 100%; height: auto;" src="../showcase-assets/photo-collage-template.png" alt="">
-                        <div>Photo Collage</div>
+                      <div class="m-2" style="flex-basis: 29.5%;">
+                        <img class="rounded" style="width: 100%; height: auto;" src="../showcase-assets/templates/photo-collage.png" alt="">
+                        <div class="mt-1">Photo Collage</div>
                       </div>
-                      <div class="m-2">
-                        <img class="rounded" style="width: 100%; height: auto;" src="../showcase-assets/spinning-wheel-template.png" alt="">
-                        <div>Spinning Wheel</div>
+                      <div class="m-2" style="flex-basis: 29.5%;">
+                        <img class="rounded" style="width: 100%; height: auto;" src="../showcase-assets/templates/voting.png" alt="">
+                        <div class="mt-1">Voting</div>
+                      </div>
+                      <div class="m-2" style="flex-basis: 29.5%;">
+                        <img class="rounded" style="width: 100%; height: auto;" src="../showcase-assets/templates/spinning-wheel.png" alt="">
+                        <div class="mt-1">Spinning Wheel</div>
+                      </div>
+                      <div class="m-2" style="flex-basis: 29.5%;">
+                        <img class="rounded" style="width: 100%; height: auto;" src="../showcase-assets/templates/sketch-collage.png" alt="">
+                        <div class="mt-1">Sketch Collage</div>
+                      </div>
+                      <div class="m-2" style="flex-basis: 29.5%;">
+                        <img class="rounded" style="width: 100%; height: auto;" src="../showcase-assets/templates/browse-all.png" alt="">
+                        <div class="mt-1"><a href="./templates-modal.html">Browse All</a></div>
                       </div>
                     </div>
                     <button class="btn btn-secondary mt-5">
                       <i class="pre-icon" data-feather="search"></i>Templates
                     </button>
                 </div>
+
               </div>
               <!-- Previews -->
-              <div class="px-6 pt-5 d-none d-lg-block">
+              <div class="px-6 pt-5 flex-grow-1 d-none d-lg-block">
                 <div class="nav with-dynamic-active-indicator" id="v-pills-tab" role="tablist" aria-orientation="horizontal">
                   <a class="nav-item text-info nav-link active pl-0" id="v-pills-presenter-tab" data-toggle="pill" href="#v-pills-presenter" role="tab" aria-controls="v-pills-presenter" aria-selected="false">Presenter View</a>
                   <a class="nav-item text-info nav-link" id="v-pills-participant-tab" data-toggle="pill" href="#v-pills-participant" role="tab" aria-controls="v-pills-participant" aria-selected="false">Participant Mode</a>
@@ -268,6 +423,8 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/feather-icons"></script>
+    <script src="../node_modules/bootstrap/js/dist/util.js"></script>
+
     <script>
       feather.replace();
 
@@ -297,7 +454,7 @@
           const parentThis = $(this);
           const indicator = parentThis.children('.active-indicator');
           const activeEl = parentThis.children('.active');
-          indicator.css({ left: activeEl.css('padding-left'), top: activeEl.outerHeight(), width: activeEl.width(), height: '4px' });
+          indicator.css({ left: activeEl.css('padding-left'), top: activeEl.outerHeight() - (parseInt(activeEl.css('padding-top')) / 2), width: activeEl.width(), height: '4px' });
 
           $(window).resize(function() {
             const activeItem = $('.nav.with-dynamic-active-indicator a.nav-link.active');
@@ -318,10 +475,21 @@
         // $('#modalTrigger').click();
         // addSvgBackgroundToForm();
 
+        const card = $('.activation-card');
+
+        card.find('.activation-trigger').click(function() {
+          const isOpen = card.hasClass("open");
+          isOpen ? card.removeClass('open') : card.addClass('open');
+        });
+
         $('.workspace-sidenav .nav .nav-link').click(function() {
           $('.workspace-sidenav a.nav-link.active').removeClass("active");
           $(this).addClass("active");
         });
+
+        $(function () {
+          $('[data-toggle="tooltip"]').tooltip({ boundary: 'window' })
+        })
 
         initNav($);
       })

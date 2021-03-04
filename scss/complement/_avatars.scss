@@ -19,7 +19,13 @@
   border-radius: $avatar-border-radius;
   font-weight: $avatar-font-weight;
   @include avatar-size($avatar-size, $avatar-font-size, $avatar-line-height);
+
+  svg, .icon {
+    margin: auto;
+    display: block;
+  }
 }
+
 
 
 .avatar-link {

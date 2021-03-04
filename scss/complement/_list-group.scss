@@ -1,0 +1,14 @@
+.list-group-flush {
+  .list-group-item {
+    padding: $list-group-item-padding-y 0px;
+  }
+}
+
+.card {
+  .list-group-item:first-child {
+    padding-top: 0px;
+  }
+  .list-group-item:last-child {
+    padding-bottom: 0px;
+  }
+}
