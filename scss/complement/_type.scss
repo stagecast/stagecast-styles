@@ -8,3 +8,33 @@
 
 .h00 { @include font-size($h00-font-size); }
 .h0 { @include font-size($h0-font-size); }
+
+// font weight utilities additional
+// semibold is missing in bootstrap
+.font-weight-semibold {
+  font-weight: $font-weight-semibold;
+}
+
+.fw-light     { font-weight: $font-weight-light !important; }
+.fw-lighter   { font-weight: $font-weight-lighter !important; }
+.fw-normal    { font-weight: $font-weight-normal !important; }
+.fw-semibold  { font-weight: $font-weight-semibold !important; }
+.fw-bold      { font-weight: $font-weight-bold !important; }
+.fw-bolder    { font-weight: $font-weight-bolder !important; }
+.fs-italic    { font-style: italic !important; }
+
+// font size utilities additional
+
+.f00  { font-size: $h00-font-size; }
+.f0   { font-size: $h0-font-size; }
+.f1   { font-size: $h1-font-size; }
+.f2   { font-size: $h2-font-size; }
+.f3   { font-size: $h3-font-size; }
+.f4   { font-size: $h4-font-size; }
+.f5   { font-size: $h5-font-size; }
+.f6   { font-size: $h6-font-size; }
+
+// text emph utilities
+.text-high-emph, .text-main, .text-0 { color: $text-high-emph }
+.text-medium-emph, .text-muted, .text-1 { color: $text-medium-emph }
+.text-no-emph, .text-disabled, .text-2 { color: $text-no-emph }

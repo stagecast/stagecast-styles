@@ -39,8 +39,8 @@ $white: #fff !default;
 $black: #000 !default;
 
 $text-high-emph: rgba($white, 0.9);
-$text-medium-emph: rgba($white, 0.7);
-$text-no-emph: rgba($white, 0.4);
+$text-medium-emph: rgba($white, 0.5);
+$text-no-emph: rgba($white, 0.3);
 
 $text-emph: () !default;
 $text-emph: map-merge(
@@ -452,7 +452,7 @@ $display-line-height:         $headings-line-height !default;
 $lead-font-size:              $font-size-base * 1.25 !default;
 $lead-font-weight:            300 !default;
 
-$small-font-size:             80% !default;
+$small-font-size:             75% !default;
 
 $text-muted:                  $text-medium-emph !default;
 

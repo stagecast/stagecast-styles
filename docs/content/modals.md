@@ -63,7 +63,7 @@ The Dialogs could be:
         <div>Would you like to delete this workspace? You and everyone else in it will lose access to all the content. Created rooms, activations and analytics data within this workspace will be permanently deleted.</div>
         <form action="" class="mt-5 mb-0">
           <div class="form-group">
-            <label for="modalInput1">Confirm by typing <span class="text-danger font-weight-bold">Workspace Name</span> below</label>
+            <label for="modalInput1">Confirm by typing <span class="text-danger fw-bold">Workspace Name</span> below</label>
             <input type="text" class="form-control is-invalid" id="modalInput1" value="Delete" placeholder="Type title..." aria-describedby="name">
             <small id="emailHelp" class="form-text invalid-feedback">Please enter the text exactly as it is displayed to confirm.</small>
           </div>
@@ -113,7 +113,7 @@ These are for getting work done. These let you do more work without having to sh
               <input type="file" id="immUploader1" name="image-upload" multiple accept="img/*">
               <label class="dropzone-control-label" for="immUploader1">
                 <div class="text-primary">Drag and drop or click to upload an image</div>
-                <div style="color: var(--text-medium-emph)">You can add 2 images</div>
+                <div class="text-muted">You can add 2 images</div>
               </label>
             </div>
             <small class="form-text text-muted">Supported file extensions are .jpg, .png, .svg, .gif</small>
@@ -153,7 +153,7 @@ Examples are: a new subscription, a new activation is about to start.
       </div>
       <div class="modal-body">
         <h1 class="h2">Prepare to Start</h1>
-        <h2 class="h5" style="font-weight: 400; color: var(--text-no-emph)">You are about to start an Activation called:</h2>
+        <h2 class="h5 text-muted fw-normal">You are about to start an Activation called:</h2>
         <h3 class="h5">Classic Quiz</h3>
       </div>
       <div class="modal-footer">

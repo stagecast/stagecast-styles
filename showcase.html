@@ -22,6 +22,18 @@
         <h4>.h4 fs: 16px lh: 20px</h4>
         <h5>.h5 fs: 14px lh: 17.5px</h5>
         <h6>.h6 fs: 12px lh: 15px</h6>
+
+        <div class="my-5"></div>
+        small text
+        <h1>This is a >> <small>small</small> << h1 text.</h1>
+        <h2>This is a <small>small</small> h2 text.</h2>
+        <h3>This is a <small>small</small> h3 text.</h3>
+        <h4>This is a <small>small</small> h4 text.</h4>
+        <h5>This is a <small>small</small> h5 text.</h5>
+        <h6>This is a <small>small</small> h6 text.</h6>
+        <p>This is a <small>small</small> p text.</p>
+        <div>This is a <small>small</small> text inside div.</div>
+
       </div>
       <!-- Buttons -->
       <div class="col-12">
@@ -123,19 +135,19 @@
           <label for="exampleInputEmail1">With counters (v1)</label>
           <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Type text..." aria-describedby="emailHelp">
           <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-          <small class="form-text-right text-muted">50 characters</small>
+          <small class="form-text form-text-right text-muted">50 characters</small>
         </div>
         <div class="form-group">
           <label for="exampleInputPassword1">Password</label>
           <input type="password" class="form-control is-invalid" placeholder="Type password..." id="exampleInputPassword1">
-          <div class="invalid-feedback">
+          <div class="form-text invalid-feedback">
             Invalid feedback message
           </div>
         </div>
         <div class="form-group">
           <label for="exampleInputPassword1">Password</label>
           <input type="password" class="form-control is-valid" value="correct-pwd" id="exampleInputPassword1">
-          <div class="valid-feedback">
+          <div class="form-text valid-feedback">
             Valid feedback message
           </div>
         </div>
@@ -153,7 +165,7 @@
               </span>
             </div>
             <input type="text" class="form-control" data-icon="download-cloud" required>
-            <div class="invalid-feedback">
+            <div class="form-text invalid-feedback">
               Please choose a username.
             </div>
           </div>
@@ -188,7 +200,7 @@
         <div class="form-group">
           <label for="exampleInputPassword1">Password</label>
           <input type="password" class="form-control form-control-sm is-invalid" placeholder="Type password..." id="exampleInputPassword1">
-          <div class="invalid-feedback">
+          <div class="form-text invalid-feedback">
             Invalid feedback message
           </div>
         </div>
@@ -454,7 +466,7 @@
             <input type="file" id="immUploader1" name="image-upload" multiple accept="img/*">
             <label class="dropzone-control-label" for="immUploader1">
               <div class="text-primary">Drag and drop or click to upload an image</div>
-              <div style="color: var(--text-medium-emph)">You can add 2 images</div>
+              <div class="text-muted">You can add 2 images</div>
             </label>
           </div>
           <small class="form-text text-muted">Supported file extensions are .jpg, .png, .svg, .gif</small>
@@ -477,7 +489,7 @@
           <input type="file" id="immUploader1" name="image-upload" multiple accept="img/*">
           <label class="dropzone-control-label" for="immUploader1">
             <div class="text-primary">Drag and drop or click to upload an image</div>
-            <div style="color: var(--text-medium-emph)">You can add 2 images</div>
+            <div class="text-muted">You can add 2 images</div>
           </label>
 
           <!-- Divider -->
@@ -553,7 +565,7 @@
                     <input type="file" id="immUploader1" name="image-upload" multiple accept="img/*">
                     <label class="dropzone-control-label" for="immUploader1">
                       <div class="text-primary">Drag and drop or click to upload an image</div>
-                      <div style="color: var(--text-medium-emph)">You can add 2 images</div>
+                      <div class="text-muted">You can add 2 images</div>
                     </label>
                   </div>
                   <small class="form-text text-muted">Supported file extensions are .jpg, .png, .svg, .gif</small>
@@ -580,7 +592,7 @@
             </div>
             <div class="modal-body">
               <h1 class="h2">Prepare to Start</h1>
-              <h2 class="h5" style="font-weight: 400; color: var(--text-no-emph)">You are about to start an Activation called:</h2>
+              <p class="f5 text-muted">You are about to start an Activation called:</p>
               <h3 class="h5">Classic Quiz</h3>
             </div>
             <div class="modal-footer">
@@ -615,7 +627,7 @@
             <img src="./showcase-assets/blankstate-img.png" alt="">
           </div>
           <h1 class="h3">This is a blank state</h1>
-          <p style="color: var(--text-no-emph)">Use it to provide information when no dynamic content exists.</p>
+          <p class="text-muted">Use it to provide information when no dynamic content exists.</p>
           <button class="btn btn-primary my-4">Call to Action</button>
           <p class="mb-0"><a class="btn btn-link">Learn More</a></p>
         </div>
@@ -723,19 +735,19 @@
           <div class="card-body">
             <ul class="list-group list-group-flush">
               <li class="list-group-item">
-                <span class="font-weight-semibold">Current Plan</span>
+                <span class="fw-semibold">Current Plan</span>
                 <span class="float-right">Enterprise</span>
               </li>
               <li class="list-group-item">
-                <span class="font-weight-semibold">Status</span>
+                <span class="fw-semibold">Status</span>
                 <span class="float-right text-success">Active</span>
               </li>
               <li class="list-group-item">
-                <span class="font-weight-semibold">Billing Period Start</span>
+                <span class="fw-semibold">Billing Period Start</span>
                 <span class="float-right">Dec. 17th 2020, 9:28pm</span>
               </li>
               <li class="list-group-item">
-                <span class="font-weight-semibold">Billing Period End</span>
+                <span class="fw-semibold">Billing Period End</span>
                 <span class="float-right">Dec. 17th 2021, 9:28pm</span>
               </li>
             </ul>
@@ -759,7 +771,7 @@
             <!-- Activation Header -->
             <div class="pr-4">
               <img width="104" src="./showcase-assets/templates/classic-quiz.png" alt="">
-              <span class="ml-3 font-weight-semibold">
+              <span class="ml-3 fw-semibold">
                 <i class="mr-2 activation-trigger" data-feather="chevron-down"></i>Classic Quiz
               </span>
               <div class="float-right align-items-center d-flex py-4">
@@ -802,7 +814,7 @@
             <!-- Activation Header -->
             <div class="pr-4">
               <img width="104" src="./showcase-assets/templates/classic-quiz.png" alt="">
-              <span class="ml-3 font-weight-semibold">
+              <span class="ml-3 fw-semibold">
                 <i class="mr-2 activation-trigger" data-feather="chevron-down"></i>Classic Quiz
               </span>
               <div class="float-right align-items-center d-flex py-4">
@@ -868,10 +880,10 @@
         </h1>
         <div>
           Category filters:
-          <div class="bg-primary d-inline-block font-weight-semibold" style="border-radius: 12px; line-height: 20px; padding: 2px 12px; vertical-align: middle; color: var(--z-space-00)">
+          <div class="bg-primary d-inline-block fw-semibold" style="border-radius: 12px; line-height: 20px; padding: 2px 12px; vertical-align: middle; color: var(--z-space-00)">
             Category 1
           </div>
-          <div class="bg-secondary d-inline-block font-weight-semibold" style="border-radius: 12px; line-height: 20px; padding: 2px 12px; vertical-align: middle; color: var(--text-medium-emph)">
+          <div class="bg-secondary d-inline-block fw-semibold text-muted" style="border-radius: 12px; line-height: 20px; padding: 2px 12px; vertical-align: middle;">
             Category 2
           </div>
         </div>

@@ -123,7 +123,7 @@ You can set heights using classes like `.form-control-lg` and `.form-control-sm`
   <input type="file" id="immUploader1" name="image-upload" multiple accept="img/*">
   <label class="dropzone-control-label" for="immUploader1">
     <div class="text-primary">Drag and drop or click to upload an image</div>
-    <div style="color: var(--text-medium-emph)">You can add 2 images</div>
+    <div class="text-muted">You can add 2 images</div>
   </label>
 </div>
 
@@ -143,7 +143,7 @@ You can set heights using classes like `.form-control-lg` and `.form-control-sm`
     <input type="file" id="immUploader1" name="image-upload" multiple accept="img/*">
     <label class="dropzone-control-label" for="immUploader1">
       <div class="text-primary">Drag and drop or click to upload an image</div>
-      <div style="color: var(--text-medium-emph)">You can add 2 images</div>
+      <div class="text-muted">You can add 2 images</div>
     </label>
     <!-- Divider -->
     <div class="dropzone-control-divider"></div>

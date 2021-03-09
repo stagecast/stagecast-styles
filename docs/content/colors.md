@@ -365,6 +365,6 @@ Below you find the color variables defined in the styles `::root` and can be acc
   --red-800: #e42e2d;
   --red-900: #d42120;
   --text-high-emph: rgba(255,255,255,0.9);
-  --text-medium-emph: rgba(255,255,255,0.7);
-  --text-no-emph: rgba(255,255,255,0.4);
+  --text-medium-emph: rgba(255,255,255,0.5);
+  --text-no-emph: rgba(255,255,255,0.3);
 ```

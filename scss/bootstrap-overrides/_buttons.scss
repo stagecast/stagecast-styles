@@ -85,7 +85,9 @@ fieldset:disabled a.btn {
 
 @each $color, $value in $theme-colors {
   .btn-ghost-#{$color} {
-    @include button-ghost-variant($value, map-get($theme-color-variants, #{$color}-light), map-get($theme-color-variants, #{$color}-dark));
+    $hover-bg: map-get($theme-color-variants, #{$color}-light);
+    $active-bg: map-get($theme-color-variants, #{$color}-dark);
+    @include button-ghost-variant($value, $hover-bg, $active-bg);
   }
 }
 
