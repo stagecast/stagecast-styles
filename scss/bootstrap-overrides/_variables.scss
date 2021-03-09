@@ -101,6 +101,17 @@ $green-700: #009134 !default;
 $green-800: #008028 !default;
 $green-900: #006015 !default;
 
+$yellow-50:  #fff5df !default;
+$yellow-100: #ffe4af !default;
+$yellow-200: #ffd27a !default;
+$yellow-300: #ffc042 !default;
+$yellow-400: #ffb20c !default;
+$yellow-500: #ffa400 !default;
+$yellow-600: #fd9800 !default;
+$yellow-700: #f88800 !default;
+$yellow-800: #f37700 !default;
+$yellow-900: #eb5d00 !default;
+
 $red-50:  #ffedf0 !default;
 $red-100: #ffd1d7 !default;
 $red-200: #ffa0a0 !default;
@@ -111,9 +122,6 @@ $red-600: #ff403a !default;
 $red-700: #f13534 !default;
 $red-800: #e42e2d !default;
 $red-900: #d42120 !default;
-
-$orange:  #fd7e14 !default;
-$yellow:  #ffc107 !default;
 
 $colors: () !default;
 $colors: map-merge(
@@ -140,6 +148,17 @@ $colors: map-merge(
     "green-800": $green-800,
     "green-900": $green-900,
 
+    "yellow-50": $yellow-50,
+    "yellow-100": $yellow-100,
+    "yellow-200": $yellow-200,
+    "yellow-300": $yellow-300,
+    "yellow-400": $yellow-400,
+    "yellow-500": $yellow-500,
+    "yellow-600": $yellow-600,
+    "yellow-700": $yellow-700,
+    "yellow-800": $yellow-800,
+    "yellow-900": $yellow-900,
+
     "red-50": $red-50,
     "red-100": $red-100,
     "red-200": $red-200,
@@ -149,10 +168,7 @@ $colors: map-merge(
     "red-600": $red-600,
     "red-700": $red-700,
     "red-800": $red-800,
-    "red-900": $red-900,
-
-    "orange":     $orange,
-    "yellow":     $yellow
+    "red-900": $red-900
   ),
   $colors
 );
@@ -161,7 +177,7 @@ $primary:       $blue-300 !default;
 $secondary:     $z-space-06 !default;
 $success:       $green-300 !default;
 $info:          $white !default;
-$warning:       $yellow !default;
+$warning:       $yellow-300 !default;
 $danger:        $red-300 !default;
 
 $theme-colors: () !default;
@@ -181,17 +197,17 @@ $theme-color-variants: () !default;
 $theme-color-variants: map-merge(
   (
     "primary-light":    $blue-200,
-    "primary-dark":    $blue-400,
-    "secondary-light":    $z-space-24,
-    "secondary-dark":    $z-space-12,
+    "primary-dark":     $blue-400,
+    "secondary-light":  $z-space-24,
+    "secondary-dark":   $z-space-12,
     "success-light":    $green-200,
-    "success-dark":    $green-400,
-    "info-light":    $gray-200,
-    "info-dark":    $gray-400,
-    "warning-light":    $warning,
-    "warning-dark":    $warning,
-    "danger-light":    $red-200,
-    "danger-dark":    $red-400,
+    "success-dark":     $green-400,
+    "info-light":       $gray-200,
+    "info-dark":        $gray-400,
+    "warning-light":    $yellow-200,
+    "warning-dark":     $yellow-400,
+    "danger-light":     $red-200,
+    "danger-dark":      $red-400,
   ),
   $theme-color-variants
 );
@@ -203,8 +219,8 @@ $theme-color-interval:      8% !default;
 $yiq-contrasted-threshold:  100 !default;
 
 // Customize the light and dark text colors for use in our YIQ color contrast function.
-$yiq-text-dark:             $gray-900 !default;
-$yiq-text-light:            $white !default;
+$yiq-text-dark:             $surface-color !default;
+$yiq-text-light:            $text-high-emph !default;
 
 // Characters which are escaped by the escape-svg function
 $escaped-characters: (

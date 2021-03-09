@@ -36,7 +36,7 @@
 @import "bootstrap/scss/progress";
 // @import "bootstrap/scss/media";
 @import "bootstrap/scss/list-group";
-@import "bootstrap-overrides/close";
+@import "bootstrap-overrides/close"; // override of "bootstrap/scss/close"
 // @import "bootstrap/scss/toasts";
 @import "bootstrap/scss/modal"; // Requires transitions
 @import "bootstrap/scss/tooltip";
@@ -50,6 +50,7 @@
 
 // additional variables for elements external to bootstrap framework
 @import "complement/variables";
+@import "complement/mixins"; // custom mixins that complement bootstrap ones (required)
 
 @import "complement/avatars";
 @import "complement/background";

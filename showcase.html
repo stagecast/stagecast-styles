@@ -664,7 +664,7 @@
             <div class="avatar avatar-primary">S</div>
           </a>
           <a class="nav-item nav-link">
-            <button class="btn btn-sm">
+            <button class="btn avatar">
               <i data-feather="plus"></i>
             </button>
           </a>
@@ -688,7 +688,7 @@
             <div class="avatar avatar-primary">S</div>
           </a>
           <a class="nav-item nav-link">
-            <button class="btn btn-sm">
+            <button class="btn avatar">
               <i data-feather="plus"></i>
             </button>
           </a>
@@ -844,6 +844,96 @@
         </div>
       </div>
 
+      <div class="col-12">
+        <div class="my-5">badges with icon</div>
+        <div>
+          <span class="badge badge-primary">
+            <i data-feather="star"></i>
+            Primary
+          </span>
+          <span class="badge badge-secondary">Secondary</span>
+          <span class="badge badge-success">Success</span>
+          <span class="badge badge-danger">Danger</span>
+          <span class="badge badge-warning">Warning</span>
+          <span class="badge badge-info">Info</span>
+        </div>
+        <h1>
+          Text with a badge:
+          <div class="bg-success text-secondary d-inline-block" style="height: 16px;line-height: 12px; border-radius: 8px; font-size: 12px; padding: 2px 4px; vertical-align: middle;">
+            <i style="width: 8px; height: 8px; fill: var(--z-space-00); vertical-align: baseline;" data-feather="star"></i>badge
+          </div>
+          <div class="bg-primary text-info d-inline-block" style="height: 32px; line-height: 20px; border-radius: 16px; font-size: 14px; padding: 4px 8px; vertical-align: middle;">
+            <i style="width: 16px; height: 16px; fill: white; vertical-align: middle;" data-feather="star"></i>badge
+          </div>
+        </h1>
+        <div>
+          Category filters:
+          <div class="bg-primary d-inline-block font-weight-semibold" style="border-radius: 12px; line-height: 20px; padding: 2px 12px; vertical-align: middle; color: var(--z-space-00)">
+            Category 1
+          </div>
+          <div class="bg-secondary d-inline-block font-weight-semibold" style="border-radius: 12px; line-height: 20px; padding: 2px 12px; vertical-align: middle; color: var(--text-medium-emph)">
+            Category 2
+          </div>
+        </div>
+        <style>
+          .btn-icon {
+            line-height: 16px;
+            padding: 8px;
+            border-radius: 17px;
+          }
+
+          .btn-icon-plain.btn-primary {
+            padding: 4px;
+            line-height: 16px;
+            background: transparent;
+            border: none;
+          }
+
+          .btn-icon-plain.btn-primary:hover svg {
+            /* fill: var(--blue-200); */
+            color: var(--blue-200);
+          }
+          .btn-icon-plain.btn-primary:focus svg {
+            /* fill: var(--blue-400); */
+            color: var(--blue-400);
+          }
+          .btn-icon-plain.btn-primary svg {
+            color: var(--blue-300);
+            /* fill: var(--blue-300); */
+          }
+
+          .btn-sm.btn-icon {
+            padding: 2px 4px;
+            border-radius: 11px;
+          }
+
+          .btn-sm.btn-icon svg {
+            width: 12px;
+            height: 12px;
+            line-height: 12px;
+          }
+
+        </style>
+        <button class="btn btn-primary btn-icon">
+          <i style="color: white; fill: white;"  data-feather="star"></i>
+        </button>
+        <button class="btn btn-sm btn-primary btn-icon">
+          <i style="color: white; fill: white;"  data-feather="star"></i>
+        </button>
+        <button class="btn btn-danger btn-icon">
+          <i style="color: white; fill: white;"  data-feather="square"></i>
+        </button>
+        <button class="btn btn-sm btn-danger btn-icon">
+          <i style="color: white; fill: white;"  data-feather="square"></i>
+        </button>
+        <button class="btn btn-primary btn-icon-plain">
+          <i  data-feather="star"></i>
+        </button>
+        <button class="btn btn-ghost-primary">
+          <i  data-feather="star"></i>
+        </button>
+      </div>
+
 
     </div><!-- Container end -->
 
@@ -851,7 +941,7 @@
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
     <script>
-      feather.replace();
+      feather.replace({ height: 16, width: 16 });
 
       ready(event => {
         addSvgBackgroundToForm();

@@ -1,8 +1,8 @@
 @each $key, $value in $z-space-colors {
-  @include bg-variant(".bg-#{$key}", $value, true);
+  @include bg-with-color-variant(".bg-#{$key}", $value, true);
 }
 
 @each $key, $value in $colors {
-  @include bg-variant(".bg-#{$key}", $value, true);
+  @include bg-with-color-variant(".bg-#{$key}", $value, true);
 }
 

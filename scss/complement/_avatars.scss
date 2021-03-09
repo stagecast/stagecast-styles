@@ -21,8 +21,7 @@
   @include avatar-size($avatar-size, $avatar-font-size, $avatar-line-height);
 
   svg, .icon {
-    margin: auto;
-    display: block;
+    vertical-align: baseline;
   }
 }
 
