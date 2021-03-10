@@ -1,5 +1,9 @@
 @mixin badge-variant($bg) {
-  color: $bg;
+  @if (color-yiq($bg) == $yiq-text-dark) {
+    color: $bg;
+  } @else {
+    color: $yiq-text-light
+  }
   background-color: rgba($bg, 0.12);
 
   @at-root a#{&} {

@@ -62,18 +62,30 @@
 }
 
 @mixin button-ghost-variant($color, $hover-bg, $active-bg, $is-icon: false) {
-  color: $color;
+  @if (color-yiq($color) == $yiq-text-dark) {
+    color: $color;
+  } @else {
+    color: $yiq-text-light
+  }
   border-color: transparent;
 
   @include hover() {
-    color: $hover-bg;
+    @if (color-yiq($hover-bg) == $yiq-text-dark) {
+      color: $hover-bg;
+    } @else {
+      color: $yiq-text-light
+    }
     background-color: rgba($hover-bg, .12);
   }
 
   &:focus,
   &.focus {
     box-shadow: 0 0 0 $btn-focus-width rgba($color, .5);
-    color: $active-bg;
+    @if (color-yiq($active-bg) == $yiq-text-dark) {
+      color: $active-bg;
+    } @else {
+      color: $yiq-text-light
+    }
     background-color: rgba($active-bg, .14);
   }
 

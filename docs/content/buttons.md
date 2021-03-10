@@ -43,6 +43,7 @@ We currently support small and normal buttons
 
 ## Buttons With Icon
 
+### With text
 
 <iframe title="Buttons with icons" height="260" src="./docs/examples/buttons-icons.html"></iframe>
 
@@ -78,4 +79,45 @@ We currently support small and normal buttons
     <button type="button" class="btn btn-sm btn-ghost-success mr-3"><i data-feather="edit-3"></i></button>
     <button type="button" class="btn btn-sm btn-ghost-danger mr-3"><i data-feather="alert-circle"></i></button>
   </div>
+```
+
+### Icon buttons
+
+Icon buttons are used in toolbox components.
+
+<iframe title="Buttons with icons 2" style="height: 100px; min-height:100px" src="./docs/examples/buttons-icons-2.html"></iframe>
+
+```html
+<button class="btn-icon btn-ghost-primary"><i data-feather="navigation"></i></button>
+<button class="btn-icon btn-ghost-secondary"><i data-feather="star"></i></button>
+<button class="btn-icon btn-ghost-success"><i data-feather="battery"></i></button>
+<button class="btn-icon btn-ghost-warning"><i data-feather="alert-triangle"></i></button>
+<button class="btn-icon btn-ghost-danger"><i data-feather="trash"></i></button>
+<button class="btn-icon btn-ghost-info"><i data-feather="help-circle"></i></button>
+```
+
+### Icon button circle
+
+The circluar button with icon is generally used for interactive UI elements like the activation cards. The main differences from the other button types are the icon color and the icon fill which are always white (`--text-high-emph`).
+
+<iframe title="Buttons with icons 3" src="./docs/examples/buttons-icons-circle.html"></iframe>
+
+```html
+<div class="mb-4">
+  <button class="btn-icon-circle btn-primary"><i data-feather="star"></i></button>
+  <button class="btn-icon-circle btn-secondary"><i data-feather="star"></i></button>
+  <button class="btn-icon-circle btn-success"><i data-feather="star"></i></button>
+  <button class="btn-icon-circle btn-warning"><i data-feather="star"></i></button>
+  <button class="btn-icon-circle btn-danger"><i data-feather="star"></i></button>
+  <button class="btn-icon-circle btn-info"><i data-feather="star"></i></button>
+  </div>
+<div class="mb-4">
+  <button class="btn-icon-circle btn-sm btn-primary"><i data-feather="star"></i></button>
+  <button class="btn-icon-circle btn-sm btn-secondary"><i data-feather="star"></i></button>
+  <button class="btn-icon-circle btn-sm btn-success"><i data-feather="star"></i></button>
+  <button class="btn-icon-circle btn-sm btn-warning"><i data-feather="star"></i></button>
+  <button class="btn-icon-circle btn-sm btn-danger"><i data-feather="star"></i></button>
+  <button class="btn-icon-circle btn-sm btn-info"><i data-feather="star"></i></button>
+  </div>
+</div>
 ```

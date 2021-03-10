@@ -1,0 +1,8 @@
+// quick fix for the alert secondary color.
+.alert-secondary {
+  color: $text-high-emph;
+
+  .close:hover {
+    color: $text-medium-emph;
+  }
+}

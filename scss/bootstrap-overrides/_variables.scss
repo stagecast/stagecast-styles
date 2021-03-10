@@ -423,6 +423,10 @@ $font-weight-bolder:          bolder !default;
 $font-weight-base:            $font-weight-normal !default;
 $line-height-base:            1.5 !default;
 
+$svg-size:                    16px !default; // added by Stagecast
+$svg-size-sm:                 12px !default; // added by Stagecast
+$svg-size-lg:                 24px !default; // added by Stagecast
+
 $h00-font-size:               16px * 3 !default;
 $h0-font-size:                16px * 2.5 !default;
 $h1-font-size:                16px * 2 !default;
@@ -871,7 +875,7 @@ $nav-tabs-link-active-bg:           $body-bg !default;
 $nav-tabs-link-active-border-color: $gray-300 $gray-300 $nav-tabs-link-active-bg !default;
 
 $nav-pills-border-radius:           $border-radius !default;
-$nav-pills-link-active-color:       $component-active-color !default;
+$nav-pills-link-active-color:       $surface-color !default;
 $nav-pills-link-active-bg:          $component-active-bg !default;
 
 $nav-divider-color:                 $gray-200 !default;
@@ -1193,7 +1197,7 @@ $list-group-item-padding-y:         map-get($spacers, 3) !default;
 $list-group-item-padding-x:         map-get($spacers, 4)!default;
 
 $list-group-hover-bg:               $z-space-02 !default;
-$list-group-active-color:           $component-active-color !default;
+$list-group-active-color:           $surface-color !default;
 $list-group-active-bg:              $component-active-bg !default;
 $list-group-active-border-color:    $list-group-active-bg !default;
 

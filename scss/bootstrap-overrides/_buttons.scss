@@ -4,18 +4,17 @@
 // Base styles
 //
 
-.btn {
+.btn, .btn-icon, .btn-icon-circle {
   display: inline-block;
   font-family: $btn-font-family;
   font-weight: $btn-font-weight;
-  color: $body-color;
   text-align: center;
   text-decoration: if($link-decoration == none, null, none);
   white-space: $btn-white-space;
-  vertical-align: middle;
   user-select: none;
   background-color: transparent;
   border: $btn-border-width solid transparent;
+
   @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
   @include transition($btn-transition);
 
@@ -51,16 +50,47 @@
   }
 
   & > svg {
-    width: 16px;
-    height: 16px;
-    vertical-align: text-bottom;
-
+    width: $svg-size;
+    height: $svg-size;
     &.pre-icon {
       margin-right: $spacer / 2;
     }
     &.post-icon {
       margin-left: $spacer / 2;
     }
+  }
+}
+
+.btn {
+  color: $body-color;
+  vertical-align: middle;
+
+  & > svg {
+    vertical-align: text-bottom;
+  }
+}
+
+.btn-icon {
+  padding: $svg-size * .25;
+  line-height: $svg-size;
+  background: transparent!important;
+  border: none;
+
+  & > svg {
+    vertical-align: bottom;
+  }
+}
+
+.btn-icon-circle {
+  line-height: $svg-size;
+  padding: $svg-size * .5;
+  border: $btn-border-width solid transparent;
+  border-radius: $svg-size + $btn-border-width;
+  color: $text-high-emph!important;
+
+  & > svg {
+    vertical-align: bottom;
+    fill: $text-high-emph;
   }
 }
 
@@ -132,6 +162,15 @@ fieldset:disabled a.btn {
 
 .btn-sm {
   @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
+}
+
+.btn-icon-circle.btn-sm {
+  @include button-size($svg-size-sm / 3, $svg-size-sm / 3, $svg-size-sm, $svg-size-sm, $svg-size-sm);
+
+  & > svg {
+    width: $svg-size-sm;
+    height: $svg-size-sm;
+  }
 }
 
 

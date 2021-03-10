@@ -52,6 +52,7 @@
 @import "complement/variables";
 @import "complement/mixins"; // custom mixins that complement bootstrap ones (required)
 
+@import "complement/alert";
 @import "complement/avatars";
 @import "complement/background";
 @import "complement/badge";
@@ -71,9 +72,10 @@
 // form right-bottom info (50 Chars left...)
 // form button append wrong border radius
 // form icons
-// button secondary variant
-// alert secondary variant
 // readonly form-control is still focusable
+// circular buttons
+// circular progress (?)
+// form stepper
 
 // Style Bootstrap icons
 .bi {
