@@ -1,30 +1,14 @@
-<p align="center">
-  <img src=".github/logo.png" width="300" height="175" alt="Bootstrap npm logo">
-</p>
+<h2 align="center">Stagecast Styles</h2>
 
-<h3 align="center">Bootstrap npm starter template</h3>
-
-<p align="center">Create new Bootstrap-powered npm projects in no time.</p>
+<p align="center">Refercene for our frontend styles.</p>
 
 ## About
 
-`bootstrap-npm-starter` is a GitHub template repository for creating new Bootstrap-powered npm projects, maintained by Bootstrap co-author @mdo. You can also use it as your own Bootstrap prototyping sandbox. It's built with Bootstrap v4 with plans to update for v5.
+This is project is built after `bootstrap-npm-starter`, a GitHub template repository for creating new Bootstrap-powered npm projects, maintained by Bootstrap co-author @mdo. It's built with Bootstrap v4, it will be moved to bootstrap v5 as soon as the libraries like @ng-bootstrap and @ngx-formly provides support for that.
 
-[![Build Status](https://github.com/twbs/bootstrap-npm-starter/workflows/CI/badge.svg)](https://github.com/twbs/bootstrap-npm-starter/actions)
+Here we override bootstrap styles and variables to provide a framework that offers the same Bootstrap APIs but with the Stagecast styling. This includes additional classes and scss variables.
 
-## Repo template
-
-Setup as a starter template, you can easily generate a new GitHub repository. From the repository homepage, click the `Use this template` button.
-
-## What's included
-
-- Single HTML page (`index.html`) to demonstrate how to include Bootstrap.
-- Includes [Bootstrap](https://getbootstrap.com) (currently using v4.6.0) source files via npm.
-- Includes [Bootstrap Icons](https://icons.getbootstrap.com) (v1.3.0), which includes over 1,200 icons available as SVGs and web fonts.
-- npm scripts (see `package.json`) for compiling and autoprefixing Sass, watching for changes, and starting a basic local server.
-- Example stylesheet (`scss/starter.scss`) highlighting two ways to include and customize Bootstrap.
-- Example JavaScript file (`assets/js/starter.js`) showing how to import all of Bootstrap, or just the parts you need.
-
+For the documentation, we use `docute`.
 ## Usage
 
 Be sure to have [Node.js](https://nodejs.org/) installed before proceeding.
@@ -37,14 +21,17 @@ cd bootstrap-npm-starter
 # Install dependencies
 npm i
 
-# Compile Sass
-npm run css-compile
+# Compile Everything
+npm run build
 
 # Watch Sass for changes (uses nodemon)
 npm run watch
 
 # Start local server (uses serve)
 npm run server
+
+# Start local documentation server (uses serve)
+npm run docs
 
 # Watches Sass for changes and starts a local server
 npm start
@@ -54,6 +41,39 @@ For the most straightforward development, open two Terminal tabs to execute `npm
 
 Open <http://localhost:3000> to see the page in action.
 
+## Import in your projects
+
+In your frontend project folder run:
+
+```shell
+npm install github:stagecast/stagecast-styles#semver:<latest-version> --save
+```
+
+### Angular project
+In case your project is implemented in Angular:
+
+```shell
+# update your angular.json to include the scripts
+
+# In case you have a SCSS project:
+
+...
+"styles": [
+  "node_modules/@stagecast/styles/scss/main.scss",
+  "your-app-styles.scss"
+]
+...
+
+# In case you have a CSS project:
+
+...
+"styles": [
+  "node_modules/@stagecast/styles/assets/main.css",
+  "your-app-styles.css"
+]
+...
+
+```
 ## Scripts
 
 The following npm scripts are available to you in this starter repo. With the exception of `npm start` and `npm test`, the remaining scripts can be run from your command line with `npm run scriptName`.
@@ -81,28 +101,6 @@ Look to the `scss/starter.scss` file for your two options of including all of Bo
 
 Uncomment specific lines as needed, then recompile to use them.
 
-### Optimizing JS
-
-Similar to optimizing CSS, we publish individual scripts for each of our plugins. This allows you to import only what you need, versus the entire bundle and dependencies. For example, if you don't plan on using dropdowns, tooltips, or popovers, you can safely omit the Popper.js depdendency. Bootstrap 4 requires jQuery though, so you won't be able to safely remove that until v5 launches.
-
-See the `js/starter.js` file for an example of how to import all of Bootstrap's JS or just the individual pieces. By default we've only imported our modal JavaScript since we have no need for anything else.
-
-You can add more options here, or import the entire `bootstrap-bundle.min.js` file, to get all JavaScript plugins and Popper.js.
-
-### PurgeCSS
-
-[PurgeCSS](https://purgecss.com/) is a [PostCSS](https://postcss.org) plugin that removes unused CSS based on your site's HTML. It finds rulesets that are unused by your HTML and removes them, ensuring only what's needed is sent to your site's visitors while improving file size and performance.
-
-We've included a single npm script that runs PurgeCSS against our single `index.html` file to remove unused styles from `assets/css/starter.css`.
-
-To purge your CSS, run `npm run css-purge` from the command line. This executes the following:
-
-```shell
-npm purgecss --css assets/css/starter.css --content index.html --output assets/css/
-```
-
-PurgeCSS is a PostCSS plugin and [can be configured](https://purgecss.com/configuration.html) to your exact needs with a little extra effort, including additional [command line options](https://purgecss.com/CLI.html).
-
 ### Stylelint
 
 Stylelint is included, as is Bootstrap's default Stylelint config, [stylelint-config-twbs-bootstrap](https://github.com/twbs/stylelint-config-twbs-bootstrap). This is the same linter configuration we use in the main Bootstrap project. It's run via the `npm test` command, which is invoked in our `ci.yml` Actions workflow file.
@@ -112,4 +110,3 @@ At the root of the repo, `.stylelintignore` is used to list files that we ignore
 ## Copyright
 
 &copy; @mdo 2020-2021 and licensed MIT.
-# stagecast-styles
