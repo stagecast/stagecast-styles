@@ -1,6 +1,6 @@
 {
   "name": "@stagecast/styles",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "private": false,
   "description": "The Bootstrap powered Stagecast styles",
   "author": "filippoboiani",
