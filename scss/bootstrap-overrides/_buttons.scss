@@ -49,6 +49,14 @@
     }
   }
 
+  & .pre-icon {
+    margin-right: $spacer / 2;
+  }
+
+  & .post-icon {
+    margin-left: $spacer / 2;
+  }
+
   & svg {
     width: $svg-size;
     height: $svg-size;
