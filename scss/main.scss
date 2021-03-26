@@ -40,7 +40,7 @@
 // @import "bootstrap/scss/toasts";
 @import "bootstrap/scss/modal"; // Requires transitions
 @import "bootstrap/scss/tooltip";
-// @import "bootstrap/scss/popover";
+@import "bootstrap/scss/popover";
 // @import "bootstrap/scss/carousel";
 // @import "bootstrap/scss/spinners";
 @import "bootstrap/scss/utilities";
@@ -63,6 +63,7 @@
 @import "complement/list-group";
 @import "complement/modals";
 @import "complement/nav";
+@import "complement/popover";
 @import "complement/progress";
 @import "complement/root";
 @import "complement/type";
@@ -73,8 +74,6 @@
 // form button append wrong border radius
 // form icons
 // readonly form-control is still focusable
-// circular buttons
-// circular progress (?)
 // form stepper
 
 // Style Bootstrap icons
