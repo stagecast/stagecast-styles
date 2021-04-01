@@ -1,3 +1,7 @@
 .popover-header {
   border-bottom: none;
+  padding-bottom: $popover-header-padding-y / 2;
+}
+.popover-body {
+  padding-top: $popover-header-padding-y / 2;
 }

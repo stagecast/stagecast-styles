@@ -18,6 +18,7 @@
   text-align: center;
   border-radius: $avatar-border-radius;
   font-weight: $avatar-font-weight;
+  object-fit: cover;
   @include avatar-size($avatar-size, $avatar-font-size, $avatar-line-height);
 
   svg, .icon {

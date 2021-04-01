@@ -38,28 +38,56 @@
 .dropzone-control {
   border: $custom-dropzone-border-color solid $custom-dropzone-border-width;
   border-radius: $custom-dropzone-border-radius;
-  padding: $custom-dropzone-padding-x $custom-dropzone-padding-y;
+  padding: 0;
   background-color: $custom-dropzone-bg;
+  position: relative;
+
   & > input[type="file"] {
     display: none;
   }
+
+  .dropzone-overlay {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: $custom-dropzone-border-radius;
+    text-align: center;
+
+    svg, img {
+      margin: auto;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 40px;
+      width: 40px;
+      display: block;
+    }
+  }
+
   .dropzone-control-label {
     background-image: $custom-dropzone-bg-img;
     background-repeat: no-repeat;
-    background-position: 0% 50%;
+    background-position: $custom-dropzone-padding-y 50%;
     background-size: 40px 40px;
-    padding-left: 64px;
+    padding: $custom-dropzone-padding-x $custom-dropzone-padding-y;
+    padding-left: 88px;
     margin-bottom: 0;
-  }
-
-  .dropzone-control-divider {
-    margin-top: $custom-dropzone-padding-y;
-    border: $custom-dropzone-border-color solid $custom-dropzone-border-width;
-    display: block;
     width: 100%;
   }
 
+  .dropzone-control-divider {
+    border: $custom-dropzone-border-color solid $custom-dropzone-border-width;
+    display: block;
+    width: auto;
+    margin: 0 $custom-dropzone-padding-y;
+  }
+
   .dropzone-preview {
+    padding: $custom-dropzone-padding-x $custom-dropzone-padding-y;
+
     button.delete {
       position: absolute;
       right: 0;
@@ -67,20 +95,36 @@
       margin: map-get($spacers, 2);
     }
 
-    .dropzone-preview-img {
+    .dropzone-preview-file {
       background: var(--z-space-02);
       border-radius: $custom-dropzone-border-radius;
       /* margin: 0 5px 0 10px; */
       width: 100%;
       position: relative;
-      margin-top: $custom-dropzone-padding-y;
+      margin-top: $custom-dropzone-padding-y / 4;
 
-      img {
+      &:first-of-type {
+        margin-top: 0;
+      }
+
+      img, .file-url {
         border: 1px solid transparent;
         border-radius: $custom-dropzone-border-radius;
         width: 100%;
+      }
+
+      img {
         height: 190px;
         object-fit: contain;
+      }
+
+      .file-url {
+        padding: 8px 12px 8px 40px;
+        display: block;
+        background-image: $custom-dropzone-file-img;
+        background-repeat: no-repeat;
+        background-position: 8px 50%;
+        background-size: $custom-dropzone-padding-y $custom-dropzone-padding-y;
       }
 
       &:hover > button.delete {
@@ -95,12 +139,14 @@
 }
 
 .dropzone-control-compact {
-  padding: 16px;
+  padding: 0;
   width: fit-content;
   height: 2px + 40px + 16px * 2;
 
   .dropzone-control-label {
-    padding-left: 40px;
+    min-width: 40px;
     min-height: 40px;
+    padding: 36px;
+    background-position-x: 16px;
   }
 }

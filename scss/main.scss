@@ -1,6 +1,7 @@
 // https://www.wikimass.com/sass/color-functions
 // Some variables define other variables' values, we can call them "root" variables.
 // You can override them here
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i,900,900i);
 
 @import "bootstrap/scss/functions"; // Required
 @import "./bootstrap-overrides/variables"; // Stagecast overrides of bootstrap/scss/variables (Required)

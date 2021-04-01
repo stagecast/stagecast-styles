@@ -1,3 +1,4 @@
+// ***** NOTE ******
 // This file needs to be added after the bootstrap variables file
 
 // Avatars
@@ -19,3 +20,32 @@ $avatar-line-height-xl: 38px !default;
 
 $avatar-border-radius: $border-radius !default;
 $avatar-font-weight: $font-weight-normal !default;
+
+// Dropzone
+
+$custom-dropzone-height:                $input-height !default;
+$custom-dropzone-height-inner:          $input-height-inner !default;
+$custom-dropzone-focus-border-color:    $input-focus-border-color !default;
+$custom-dropzone-focus-box-shadow:      $input-focus-box-shadow !default;
+$custom-dropzone-disabled-bg:           $input-disabled-bg !default;
+
+$custom-dropzone-padding-y:             map-get($spacers, 5) !default;
+$custom-dropzone-padding-x:             map-get($spacers, 5) !default;
+$custom-dropzone-line-height:           $input-line-height !default;
+$custom-dropzone-font-family:           $input-font-family !default;
+$custom-dropzone-font-weight:           $input-font-weight !default;
+$custom-dropzone-color:                 $input-color !default;
+$custom-dropzone-bg:                    $input-bg !default;
+$custom-dropzone-border-width:          $input-border-width !default;
+$custom-dropzone-border-color:          $input-border-color !default;
+$custom-dropzone-border-radius:         $input-border-radius !default;
+$custom-dropzone-box-shadow:            $input-box-shadow !default;
+$custom-dropzone-button-color:          $custom-dropzone-color !default;
+$custom-dropzone-button-bg:             $input-group-addon-bg !default;
+
+$custom-dropzone-img-color:             $text-medium-emph !default;
+$custom-dropzone-bg-img:                url("data:image/svg+xml,<svg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M23.3346 3.33331H10.0013C9.11725 3.33331 8.2694 3.6845 7.64428 4.30962C7.01916 4.93474 6.66797 5.78259 6.66797 6.66665V33.3333C6.66797 34.2174 7.01916 35.0652 7.64428 35.6903C8.2694 36.3155 9.11725 36.6666 10.0013 36.6666H30.0013C30.8854 36.6666 31.7332 36.3155 32.3583 35.6903C32.9834 35.0652 33.3346 34.2174 33.3346 33.3333V13.3333L23.3346 3.33331Z' stroke='#{$custom-dropzone-img-color}' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/><path d='M23.332 3.33331V13.3333H33.332' stroke='#{$custom-dropzone-img-color}' stroke-width='1' stroke-linecap='round' stroke-linejoin='round'/><path d='M20 30V20' stroke='#{$custom-dropzone-img-color}' stroke-width='1' stroke-linecap='round' stroke-linejoin='round'/><path d='M15 25H25' stroke='#{$custom-dropzone-img-color}' stroke-width='1' stroke-linecap='round' stroke-linejoin='round'/></svg>") !default;
+$custom-dropzone-file-img:              url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 24 24' fill='none' stroke='#{$custom-dropzone-img-color}' stroke-width='1' stroke-linecap='round' stroke-linejoin='round'><path d='M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z'></path><polyline points='13 2 13 9 20 9'></polyline></svg>") !default;
+
+
+// added - end
