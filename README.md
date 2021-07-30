@@ -1,6 +1,6 @@
 <h2 align="center">Stagecast Styles</h2>
 
-<p align="center">Refercene for our frontend styles.</p>
+<p align="center">Reference for our frontend styles.</p>
 
 ## About
 
